@@ -23,13 +23,14 @@
 <div class="page">
   <h1>Спасибо за покупку!</h1>
   <div class="card" id="wait">
-    <p id="status">Ждём подтверждение оплаты… Обычно это меньше минуты. Страницу можно не закрывать.</p>
+    <p id="status"><b style="color:#d9822b">Не закрывайте эту страницу!</b> Ждём подтверждение оплаты… Обычно это меньше минуты, и здесь появится ваш ключ.</p>
+    <p class="muted" id="vpnhint" hidden><b>Ключ не появляется?</b> Включите VPN и обновите страницу: ключ уже создан, просто ваш интернет-провайдер может не пропускать наш сервер.</p>
   </div>
   <div class="card" id="done" hidden>
     <p>Ваш лицензионный ключ:</p>
     <div class="key" id="key"></div>
     <button type="button" id="copy">Скопировать</button>
-    <p class="muted">Сохраните его. Копия отправлена на вашу почту (если письмо не пришло, проверьте «Спам»).</p>
+    <p class="muted"><b>Сохраните ключ</b> (скопируйте и запишите в надёжное место): мы можем показать его снова только по этой же ссылке.</p>
   </div>
   <div class="card">
     <strong>Как ввести ключ</strong>
@@ -38,7 +39,7 @@
       <li>Откройте плагин на дорожке барабана и введите ключ в окне активации. Нужен интернет (один раз).</li>
       <li>Один ключ работает на одном компьютере. Переносить на другой можно через деактивацию в плагине.</li>
     </ol>
-    <p class="muted">Не пришёл ключ или нужна помощь: <a href="https://t.me/ssm_metalmix">Telegram</a>. Укажите номер заказа: <span id="order"></span></p>
+    <p class="muted">Не пришёл ключ или нужна помощь: <a href="https://t.me/ssm_metalmix">Telegram</a> или <a href="https://vk.ru/ssm_metalmix">ВКонтакте</a>. Укажите номер заказа: <span id="order"></span></p>
   </div>
 </div>
 <script>
@@ -46,7 +47,7 @@
   var SHOP = 'https://best-trigger-license.ssm-audio.workers.dev';
   var id = new URLSearchParams(location.search).get('order') || '';
   document.getElementById('order').textContent = id.slice(0, 8);
-  var tries = 0;
+  var tries = 0, fails = 0;
   function show(key) {
     document.getElementById('wait').hidden = true;
     document.getElementById('done').hidden = false;
@@ -59,7 +60,10 @@
       if (o.ok && o.status === 'issued') { show(o.key); return; }
       if (++tries < 200) setTimeout(ask, 3000);
       else document.getElementById('status').textContent = 'Оплата ещё не подтверждена. Обновите страницу через несколько минут или напишите нам в Telegram с номером заказа.';
-    }).catch(function () { if (++tries < 200) setTimeout(ask, 5000); });
+    }).catch(function () {
+      if (++fails >= 2) document.getElementById('vpnhint').hidden = false;   // the server cannot be reached: with some providers only through a VPN
+      if (++tries < 200) setTimeout(ask, 5000);
+    });
   }
   ask();
 })();
