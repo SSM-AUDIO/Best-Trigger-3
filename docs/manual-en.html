@@ -184,6 +184,7 @@
   <tr><td><b>Tick</b></td><td>Shows or hides the trace on the scope.</td></tr>
   <tr><td><b>Fader</b></td><td>Level, −∞ to +24 dB. Original starts at −∞, samples at 0 dB.</td></tr>
   <tr><td><b>M / S</b></td><td>Mute and Solo.</td></tr>
+  <tr><td><b>0 ms</b> (Original)</td><td>Off by default. The original is normally delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it. Switch <b>0 ms</b> on and the original passes at once and the plugin adds no latency: use it when that delay matters (for example live monitoring). The samples then start about 6 ms after the original and cannot be moved earlier (negative Offsets do nothing), and <b>Orig Gate</b> and phase tracking do not work in this mode.</td></tr>
   <tr><td><b>Ø</b></td><td>Flips the phase of the sample.</td></tr>
   <tr><td><b>ENV</b></td><td>Attack, Sustain and Release of the sample.</td></tr>
   <tr><td><b>FLT</b></td><td>Low Cut and High Cut for this sample.</td></tr>
