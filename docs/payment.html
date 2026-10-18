@@ -117,6 +117,20 @@
         <h1>Best Trigger 3 (заглушка)</h1>
             
 
+        <div class="info" id="shop">
+          <strong>Купить лицензию Best Trigger 3 — 4200 ₽</strong>
+          <p>Оплата картой или с кошелька ЮMoney. Ключ появится на странице сразу после оплаты и придёт на почту.</p>
+          <form id="buy-form" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+            <input id="buy-email" type="email" required placeholder="Ваш e-mail" autocomplete="email" style="flex:1 1 220px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit">
+            <select id="buy-method" style="padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit">
+              <option value="card">Банковская карта</option>
+              <option value="wallet">Кошелёк ЮMoney</option>
+            </select>
+            <button type="submit" style="padding:12px 26px;border-radius:99px;border:0;background:var(--pill);color:var(--pill-ink);font:inherit;font-weight:700;cursor:pointer">Купить за 4200 ₽</button>
+          </form>
+          <p id="buy-msg" style="margin-top:10px"></p>
+        </div>
+
         <div class="payments">
           <!-- Замените URL-плейсхолдеры на свои страницы продавца/оплаты перед публикацией. -->
           <a class="pay boosty" href="https://boosty.to/boostbg/posts/92d9ccd6-8a74-457f-8d71-3baa345ece49?share=success_publish_link" target="_blank" rel="noopener noreferrer">
@@ -168,5 +182,32 @@
   </main>
   <footer>© SSM-Audio · Best Trigger 3</footer>
 </div>
+<script>
+(function () {
+  var SHOP = 'https://best-trigger-license.ssm-audio.workers.dev';
+  var form = document.getElementById('buy-form'), msg = document.getElementById('buy-msg');
+  if (!form) return;
+  var say = function (t) { msg.textContent = t; };
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    say('Минуту…');
+    fetch(SHOP + '/v1/order', { method: 'POST', headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ email: document.getElementById('buy-email').value, method: document.getElementById('buy-method').value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (o) {
+        if (!o.ok) {
+          say(o.error === 'bad_email' ? 'Проверьте адрес почты.' : o.error === 'rate_limited' ? 'Слишком много попыток, попробуйте позже.' : 'Оплата на сайте пока недоступна. Выберите другой способ ниже.');
+          return;
+        }
+        if (o.pay.type === 'redirect') { location.href = o.pay.url; return; }
+        var f = document.createElement('form');
+        f.method = o.pay.method; f.action = o.pay.action;
+        Object.keys(o.pay.fields).forEach(function (k) { var i = document.createElement('input'); i.type = 'hidden'; i.name = k; i.value = o.pay.fields[k]; f.appendChild(i); });
+        document.body.appendChild(f); f.submit();
+      })
+      .catch(function () { say('Не получилось связаться с сервером. Попробуйте ещё раз или выберите другой способ ниже.'); });
+  });
+})();
+</script>
 </body>
 </html>
