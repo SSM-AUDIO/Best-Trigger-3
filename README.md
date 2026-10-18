@@ -17,7 +17,7 @@
 
 > Proprietary software. © 2026 SSM-Audio. All rights reserved. This page only carries the installers (see [Releases](../../releases)).
 
-**Try it for 14 days, all functions open, no key needed.** Then buy a licence key: [how to buy](https://ssm-audio.github.io/Best-Trigger-3/buy.html).
+**Try it for 14 days, all functions open, no key needed.** Then buy a licence key: [how to buy](https://ssm-audio.github.io/Best-Trigger-3/download.html).
 
 1. Download the installer for your system from **[Releases](../../releases/latest)**.
 2. Run it. If Windows shows a blue warning: **More info → Run anyway**. On macOS: right-click the `.pkg` → **Open** ([details](docs/INSTALL-macOS.md#english)).
@@ -38,7 +38,7 @@ Windows 10/11 64-bit or macOS 10.15+; a DAW with VST3.
 
 > Программа с закрытым исходным кодом. © 2026 SSM-Audio. Все права защищены. На этой странице только установщики (см. [Releases](../../releases)).
 
-**Попробуйте 14 дней: все функции открыты, ключ не нужен.** Потом купите лицензионный ключ: [как купить](https://ssm-audio.github.io/Best-Trigger-3/buy.html).
+**Попробуйте 14 дней: все функции открыты, ключ не нужен.** Потом купите лицензионный ключ: [как купить](https://ssm-audio.github.io/Best-Trigger-3/download.html).
 
 1. Скачайте установщик для вашей системы на странице **[Releases](../../releases/latest)**.
 2. Запустите его. Если Windows показывает синее предупреждение: **Подробнее → Выполнить в любом случае**. На macOS: правый щелчок по `.pkg` → **Открыть** ([подробнее](docs/INSTALL-macOS.md#русский)).
