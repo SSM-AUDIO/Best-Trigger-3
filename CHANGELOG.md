@@ -4,6 +4,10 @@
 
 ## English
 
+### 0.3.1
+- **Sound:** a sample recorded at another sample rate than your project (for example a 44.1 kHz file in a 48 kHz project) is now converted with a high-quality filter. Before, the top end above about 6 kHz was slightly dulled (about 1 dB at 8 kHz, 3 to 4 dB at 16 kHz), and 96 kHz files added a little noise from above 20 kHz. A sample that already has the project's rate plays exactly as it is in the file.
+- **Tune** keeps more of the top end.
+
 ### 0.3.0
 - **14-day trial.** Press **Start 14-day trial** in the plugin window: all functions are open for 14 days, no key needed. It is one trial per computer.
 - **The free version is gone.** Best Trigger 3 is one product now: the trial, then a licence key (see [how to buy](https://ssm-audio.github.io/Best-Trigger-3/buy.html)).
@@ -93,6 +97,10 @@
 - First release.
 
 ## Русский
+
+### 0.3.1
+- **Звук:** сэмпл, записанный на другой частоте дискретизации, чем ваш проект (например, файл 44,1 кГц в проекте 48 кГц), теперь переводится качественным фильтром. Раньше верх выше примерно 6 кГц слегка притуплялся (около 1 дБ на 8 кГц, 3–4 дБ на 16 кГц), а файлы 96 кГц добавляли немного шума из диапазона выше 20 кГц. Сэмпл, у которого частота уже как в проекте, играет в точности как в файле.
+- **Tune** лучше сохраняет верх.
 
 ### 0.3.0
 - **Пробный период 14 дней.** Нажмите в окне плагина **Start 14-day trial**: 14 дней открыты все функции, ключ не нужен. Пробный период один на компьютер.
