@@ -40,7 +40,7 @@
 <header class="top">
   <h1>BEST TRIGGER 3</h1>
   <div class="sub">User Manual</div>
-  <div class="ver">Version 0.3.2 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a></div>
+  <div class="ver">Version 0.3.3 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a></div>
 </header>
 <main>
 
@@ -163,7 +163,7 @@
   <tr><td><b>Sensitivity</b></td><td>How quickly the detector is ready again. Higher = safer against doubles, lower = catches fast hits. Drag the yellow lines.</td><td>50%</td></tr>
   <tr><td><b>Retrigger</b></td><td>The dead time after a hit. Drag the edge of the purple zone.</td><td>40 ms</td></tr>
   <tr><td><b>Soft</b> and <b>Input</b></td><td>The strength of a hit (which velocity layer plays and how loud) is measured on a scale from <b>Soft</b> (velocity 0, the green line low on the Timeline) to <b>Input</b> (velocity 127, the dashed green line; it may go up to +12 dB). The Threshold is only where a hit is noticed, so a hit just over it is not forced to velocity 0. The defaults (Soft −19 dB, Input −6.9 dB) give the velocity layers and the level inside a layer the way the well-known trigger plays them: a harder hit changes the layer and, inside a layer, is a little louder. Click the Soft box to switch the line on, drag it or double-click to type a value; 0 = off, and then the scale begins at the Threshold (projects made earlier keep it this way).</td></tr>
-  <tr><td><b>Converted <code>.tci</code> instruments</b></td><td>They are played at the sample rate written in the file, exactly as the well-known trigger plays them, in a project of any rate. The output knob starts at −3 dB (a new plugin). Instruments converted by an earlier version are converted again from their <code>.tci</code> when you run the conversion again.</td></tr>
+  <tr><td><b>Converted <code>.tci</code> instruments</b></td><td>They are played at the sample rate written in the file, exactly as the well-known trigger plays them, in a project of any rate. Instruments converted by an earlier version are converted again from their <code>.tci</code> when you run the conversion again.</td></tr>
   <tr><td><b>Input</b></td><td>The level of your loudest hits: they play the hardest layer. Full Auto sets it; or drag the green <b>Loud</b> line.</td><td>0 dB</td></tr>
   <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change.</td><td>—</td></tr>
 </table>
@@ -188,7 +188,7 @@
   <tr><td><b>Tick</b></td><td>Shows or hides the trace on the scope.</td></tr>
   <tr><td><b>Fader</b></td><td>Level, −∞ to +24 dB. Original starts at −∞, samples at 0 dB.</td></tr>
   <tr><td><b>M / S</b></td><td>Mute and Solo. Right-click <b>M</b>, <b>S</b> or <b>Ø</b>: only this channel gets it, all the others lose it (a quick way to listen to one).</td></tr>
-  <tr><td><b>0 ms</b> (Original)</td><td>Off by default. The original is normally delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it. Switch <b>0 ms</b> on and the original passes at once and the plugin adds no latency (<b>Orig Gate</b> is greyed out then, it cannot work): use it when that delay matters (for example live monitoring). The samples then start about 6 ms after the original and cannot be moved earlier (negative Offsets do nothing), and <b>Orig Gate</b> and phase tracking do not work in this mode.</td></tr>
+  <tr><td><b>Latency</b></td><td>The original is delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it and be moved earlier with a negative Offset.</td></tr>
   <tr><td><b>Ø</b></td><td>Flips the phase of the sample.</td></tr>
   <tr><td><b>ENV</b></td><td>Attack, Sustain and Release of the sample.</td></tr>
   <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Drag the dots; the wheel over a bell changes its width (Q); a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). Low Cut and High Cut also have a <b>Slope</b>: 6, 12, 18 or 24 dB per octave (12 is the usual one). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
@@ -290,7 +290,7 @@
 <p>The plugin uses the JUCE framework, TweetNaCl and a method from the tci2wav project (MIT). Licence texts: <a href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>. VST is a trademark of Steinberg Media Technologies GmbH.</p>
 <footer>
   <b>© 2026 SSM-Audio. All rights reserved.</b><br>
-  Best Trigger 3 · version 0.3.2
+  Best Trigger 3 · version 0.3.3
 </footer>
 </main>
 </body>

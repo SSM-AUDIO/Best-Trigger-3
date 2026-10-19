@@ -4,6 +4,17 @@
 
 ## English
 
+### 0.3.3
+- **Velocity layers and volume now respond like in the well-known trigger.** A harder hit changes the velocity layer and, inside a layer, is a little louder. New plugins start with the scale set for this (**Soft** −19 dB, **Input** −6.9 dB); the Threshold is only where a hit is noticed. Projects saved earlier sound the same as before.
+- **Soft** line on the Timeline and **Input** up to +12 dB: set where the velocity scale begins and ends.
+- **Precise sample start** (settings menu, on for new plugins): the sample starts at the real beginning of the hit, whatever the Threshold.
+- Converted **.tci** instruments are played at the sample rate written in the file, as the well-known trigger plays them.
+- The samples sit 3 dB lower, as in the well-known trigger, and the original that passes through the plugin keeps its level: the plugin's output now equals the original track and the plugin's samples played side by side. The **Output** knob stays at 0 dB.
+- The cross in the library search clears only the search.
+- The **Soft** line is pink (green is the Input line).
+- The **0 ms** mode is removed: the original is always delayed by the plugin latency (36 ms) so that samples can start before it.
+- **Buy** opens the payment page, the update notice opens the download page.
+
 ### 0.3.2
 - **EQ:** Low Cut and High Cut get a **Slope** (6, 12, 18 or 24 dB per octave; 12 is the usual one, projects sound the same). The EQ curve no longer draws a line along the bottom edge.
 - With **0 ms** on, the **Orig Gate** knob is greyed out (it cannot work without the delay).
@@ -108,6 +119,17 @@
 - First release.
 
 ## Русский
+
+### 0.3.3
+- **Слои по велосити и громкость теперь отзываются как в известном триггере.** Более сильный удар меняет слой и внутри слоя звучит немного громче. Новый плагин стартует со шкалой, настроенной для этого (**Soft** −19 дБ, **Input** −6,9 дБ); Threshold — только место, где удар замечается. Проекты, сохранённые раньше, звучат как прежде.
+- Линия **Soft** на Timeline и **Input** до +12 дБ: задают, где шкала велосити начинается и заканчивается.
+- **Precise sample start** (меню настроек, у нового плагина включено): сэмпл стартует с настоящего начала удара, при любом Threshold.
+- Конвертированные инструменты **.tci** играются с частотой дискретизации, записанной в файле, как их играет известный триггер.
+- Сэмплы звучат на 3 дБ тише, как в известном триггере, а оригинал, проходящий через плагин, сохраняет свой уровень: выход плагина теперь равен оригинальной дорожке и сэмплам плагина, пущенным рядом. Ручка **Output** остаётся на 0 дБ.
+- Крестик в поиске по библиотеке очищает только строку поиска.
+- Линия **Soft** розовая (зелёная — линия Input).
+- Режим **0 ms** убран: оригинал всегда задержан на задержку плагина (36 мс), чтобы сэмплы могли начинаться раньше него.
+- Кнопка **Buy** открывает страницу оплаты, уведомление об обновлении — страницу скачивания.
 
 ### 0.3.2
 - **EQ:** у Low Cut и High Cut появился **Slope** (6, 12, 18 или 24 дБ на октаву; 12 — обычный, проекты звучат так же). Кривая EQ больше не рисует линию вдоль нижнего края.
