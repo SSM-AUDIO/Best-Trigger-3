@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.2
+- **EQ:** Low Cut and High Cut get a **Slope** (6, 12, 18 or 24 dB per octave; 12 is the usual one, projects sound the same). The EQ curve no longer draws a line along the bottom edge.
+- With **0 ms** on, the **Orig Gate** knob is greyed out (it cannot work without the delay).
+- **Buying:** the new purchase page on the site: pay by card or ЮMoney wallet and get the licence key at once.
+
 ### 0.3.1
 - **EQ on every channel, the Original too** (the FLT button is now EQ): Low Cut, Low Shelf, three Bells, High Shelf and High Cut in a window over the scope. Right-click a dot: that filter off and on. Right-click the EQ button: the whole EQ off and on. Older projects sound the same.
 - **Samples:** drag a plate onto another one to swap them (Ctrl/Cmd: copy); Copy, Paste and Rename in the plate menu; select several samples (Ctrl/Cmd + click or a frame) and move their Offsets together.
@@ -103,6 +108,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.2
+- **EQ:** у Low Cut и High Cut появился **Slope** (6, 12, 18 или 24 дБ на октаву; 12 — обычный, проекты звучат так же). Кривая EQ больше не рисует линию вдоль нижнего края.
+- При включённом **0 ms** ручка **Orig Gate** становится серой (без задержки она работать не может).
+- **Покупка:** на сайте новая страница покупки: оплата картой или кошельком ЮMoney, ключ выдаётся сразу.
 
 ### 0.3.1
 - **EQ на каждом канале, в том числе на Original** (кнопка FLT стала EQ): Low Cut, Low Shelf, три колокола, High Shelf и High Cut в окне поверх осциллографа. Правый щелчок по точке: этот фильтр выключается и включается. Правый щелчок по кнопке EQ: выключается и включается весь EQ. Старые проекты звучат так же.

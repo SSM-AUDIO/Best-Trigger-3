@@ -40,7 +40,7 @@
 <header class="top">
   <h1>BEST TRIGGER 3</h1>
   <div class="sub">User Manual</div>
-  <div class="ver">Version 0.3.1 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a></div>
+  <div class="ver">Version 0.3.2 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a></div>
 </header>
 <main>
 
@@ -186,10 +186,10 @@
   <tr><td><b>Tick</b></td><td>Shows or hides the trace on the scope.</td></tr>
   <tr><td><b>Fader</b></td><td>Level, −∞ to +24 dB. Original starts at −∞, samples at 0 dB.</td></tr>
   <tr><td><b>M / S</b></td><td>Mute and Solo. Right-click <b>M</b>, <b>S</b> or <b>Ø</b>: only this channel gets it, all the others lose it (a quick way to listen to one).</td></tr>
-  <tr><td><b>0 ms</b> (Original)</td><td>Off by default. The original is normally delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it. Switch <b>0 ms</b> on and the original passes at once and the plugin adds no latency: use it when that delay matters (for example live monitoring). The samples then start about 6 ms after the original and cannot be moved earlier (negative Offsets do nothing), and <b>Orig Gate</b> and phase tracking do not work in this mode.</td></tr>
+  <tr><td><b>0 ms</b> (Original)</td><td>Off by default. The original is normally delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it. Switch <b>0 ms</b> on and the original passes at once and the plugin adds no latency (<b>Orig Gate</b> is greyed out then, it cannot work): use it when that delay matters (for example live monitoring). The samples then start about 6 ms after the original and cannot be moved earlier (negative Offsets do nothing), and <b>Orig Gate</b> and phase tracking do not work in this mode.</td></tr>
   <tr><td><b>Ø</b></td><td>Flips the phase of the sample.</td></tr>
   <tr><td><b>ENV</b></td><td>Attack, Sustain and Release of the sample.</td></tr>
-  <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Drag the dots; the wheel over a bell changes its width (Q); a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
+  <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Drag the dots; the wheel over a bell changes its width (Q); a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). Low Cut and High Cut also have a <b>Slope</b>: 6, 12, 18 or 24 dB per octave (12 is the usual one). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
   <tr><td><b>Pan, Tune</b></td><td>Pan L100…R100; pitch ±24 semitones.</td></tr>
   <tr><td><b>Release</b></td><td><b>Auto</b> (default): a new hit fades out the previous sample of the same channel by itself, faster on fast parts. <b>off</b> keeps the tails; or set a time.</td></tr>
   <tr><td><b>Orig Gate</b></td><td>After a hit the original stays audible for this time, then closes. The further right, the shorter; all the way left = off.</td></tr>
@@ -287,7 +287,7 @@
 <p>The plugin uses the JUCE framework, TweetNaCl and a method from the tci2wav project (MIT). Licence texts: <a href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>. VST is a trademark of Steinberg Media Technologies GmbH.</p>
 <footer>
   <b>© 2026 SSM-Audio. All rights reserved.</b><br>
-  Best Trigger 3 · version 0.3.1
+  Best Trigger 3 · version 0.3.2
 </footer>
 </main>
 </body>
