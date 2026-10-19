@@ -1,0 +1,5 @@
+{
+  "version": "0.3.3",
+  "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
+  "notes": "Velocity layers and volume now respond like in the well-known trigger. A harder hit changes the velocity layer and, inside a layer, is a little louder. New plugins start with the scale set for this (Soft −19 dB, Input −6.9 dB); the Threshold is only where a hit is noticed. Projects saved earlier sound the same as before.\nSoft line on the Timeline and Input up to +12 dB: set where the velocity scale begins and ends.\nPrecise sample start (settings menu, on for new plugins): the sample starts at the real beginning of the hit, whatever the Threshold."
+}
