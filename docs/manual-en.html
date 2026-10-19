@@ -162,6 +162,7 @@
   <tr><td><b>Threshold</b></td><td>The level above which the signal is a hit. Drag the red lines.</td><td>−30 dB</td></tr>
   <tr><td><b>Sensitivity</b></td><td>How quickly the detector is ready again. Higher = safer against doubles, lower = catches fast hits. Drag the yellow lines.</td><td>50%</td></tr>
   <tr><td><b>Retrigger</b></td><td>The dead time after a hit. Drag the edge of the purple zone.</td><td>40 ms</td></tr>
+  <tr><td><b>Soft</b> and <b>Input</b></td><td>The strength of a hit (which velocity layer plays and how loud) is measured on a scale. By default the scale begins at the Threshold and ends at <b>Input</b> (the dashed green line; it may go up to +12 dB). The <b>Soft</b> box above the Timeline sets where the scale begins <i>independently</i> of the Threshold: click it to switch on (20 dB below the Threshold), drag the green line or double-click to type a value, 0 = off. To work like Trigger 2, whose scale is very wide, set Soft to about −51 dB and Input to +12 dB and keep the Threshold where hits are detected.</td></tr>
   <tr><td><b>Input</b></td><td>The level of your loudest hits: they play the hardest layer. Full Auto sets it; or drag the green <b>Loud</b> line.</td><td>0 dB</td></tr>
   <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change.</td><td>—</td></tr>
 </table>
@@ -258,6 +259,7 @@
   <tr><td><b>MIDI in / out note</b></td><td>The notes.</td></tr>
   <tr><td><b>Sample library</b></td><td>The library folder and migration.</td></tr>
   <tr><td><b>Auto trim</b></td><td>Off by default: when on, it lowers the output knob by what goes over 0 dB; never raises it. The letter A in the knob shows it; Ctrl + click on the knob switches it (Cmd + click on a Mac), as does the settings menu.</td></tr>
+  <tr><td><b>Precise sample start</b></td><td>On by default (gear menu). The samples start at the real beginning of the hit, as in Trigger 2, whatever the Threshold is. Switched off, a sample starts at the moment the signal crosses the Threshold, a few milliseconds late (more for soft hits). Projects made before this setting existed have it off, so they sound as before. Not used with the <b>0 ms</b> switch.</td></tr>
   <tr><td><b>Remember last samples / settings</b></td><td>A new plugin starts with your last samples and/or settings. Both are off by default; a saved project always opens with its own samples.</td></tr>
   <tr><td><b>Help improve Best Trigger</b></td><td>Usage statistics and error reports; off until you agree.</td></tr>
   <tr><td><b>Quick start guide…, Manual, Website</b></td><td>Help.</td></tr>
