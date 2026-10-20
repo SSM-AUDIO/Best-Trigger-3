@@ -4,6 +4,16 @@
 
 ## English
 
+### 0.3.4
+- **Velocity is read the way the well-known trigger reads it:** it is proportional to the peak of the hit, and a hit at the **Input** level (−6 dB by default) is velocity 127. The **Soft** control is gone. Quiet hits of the first layer start from silence and grow louder, as in the well-known trigger. Older projects may sound a little different: check **Input**.
+- **Sensitivity** is now a second threshold (the higher the number, the lower it is); the louder of the two thresholds decides. At 100 only the **Threshold** decides.
+- **Fast rolls and ghost notes:** a hit that follows another one closely and clearly rises above its tail is now played, so rolls and ghost notes are not skipped.
+- **Auto Threshold** and **Full Auto** set **Input** to −6 dB and put the Threshold closer to the soft hits.
+- Converted **.tci** instruments play at the volume written in the file. **Run the Migration again** to refresh instruments that were converted before.
+- The right panel has the buttons **Full Auto**, **Auto Threshold**, **Auto Phase** and **Auto** (a menu with the other tools).
+- The value boxes above the scope (Retrigger, Sensitivity, Smp Offset) are dragged **up and down**; the wheel changes them a little.
+- The plugin's latency is 39 ms. The update check no longer depends on the GitHub limit.
+
 ### 0.3.3
 - **Velocity layers and volume now respond like in the well-known trigger.** A harder hit changes the velocity layer and, inside a layer, is a little louder. New plugins start with the scale set for this (**Soft** −19 dB, **Input** −6.9 dB); the Threshold is only where a hit is noticed. Projects saved earlier sound the same as before.
 - **Soft** line on the Timeline and **Input** up to +12 dB: set where the velocity scale begins and ends.
@@ -119,6 +129,16 @@
 - First release.
 
 ## Русский
+
+### 0.3.4
+- **Velocity считается так же, как в известном триггере:** она пропорциональна пику удара, а удар на уровне **Input** (по умолчанию −6 дБ) даёт velocity 127. Параметр **Soft** убран. Тихие удары первого слоя начинаются с тишины и становятся громче, как в известном триггере. Старые проекты могут звучать немного иначе: проверьте **Input**.
+- **Sensitivity** теперь второй порог (чем больше число, тем он ниже); решает более высокий из двух порогов. На 100 решает только **Threshold**.
+- **Быстрые роллы и призрачные ноты:** удар, который идёт сразу за предыдущим и заметно выше его хвоста, теперь играется, поэтому роллы и призрачные ноты не пропускаются.
+- **Auto Threshold** и **Full Auto** ставят **Input** −6 дБ и кладут Threshold ближе к тихим ударам.
+- Конвертированные инструменты **.tci** играют с громкостью, записанной в файле. **Повторите Migration**, чтобы обновить инструменты, сконвертированные раньше.
+- В правой панели кнопки **Full Auto**, **Auto Threshold**, **Auto Phase** и **Auto** (меню с остальными инструментами).
+- Окошки над осциллографом (Retrigger, Sensitivity, Smp Offset) тянутся **вверх и вниз**; колесо меняет значение понемногу.
+- Задержка плагина 39 мс. Проверка обновлений больше не зависит от лимита GitHub.
 
 ### 0.3.3
 - **Слои по велосити и громкость теперь отзываются как в известном триггере.** Более сильный удар меняет слой и внутри слоя звучит немного громче. Новый плагин стартует со шкалой, настроенной для этого (**Soft** −19 дБ, **Input** −6,9 дБ); Threshold — только место, где удар замечается. Проекты, сохранённые раньше, звучат как прежде.

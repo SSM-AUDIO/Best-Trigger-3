@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "0.3.4",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Velocity layers and volume now respond like in the well-known trigger. A harder hit changes the velocity layer and, inside a layer, is a little louder. New plugins start with the scale set for this (Soft −19 dB, Input −6.9 dB); the Threshold is only where a hit is noticed. Projects saved earlier sound the same as before.\nSoft line on the Timeline and Input up to +12 dB: set where the velocity scale begins and ends.\nPrecise sample start (settings menu, on for new plugins): the sample starts at the real beginning of the hit, whatever the Threshold."
+  "notes": "Velocity is read the way the well-known trigger reads it: it is proportional to the peak of the hit, and a hit at the Input level (−6 dB by default) is velocity 127. The Soft control is gone. Quiet hits of the first layer start from silence and grow louder, as in the well-known trigger. Older projects may sound a little different: check Input.\nSensitivity is now a second threshold (the higher the number, the lower it is); the louder of the two thresholds decides. At 100 only the Threshold decides."
 }
