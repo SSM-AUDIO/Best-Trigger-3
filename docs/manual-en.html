@@ -122,7 +122,7 @@
   <tr><td><b>Scope</b></td><td>Three views, one button each at the bottom right of the scope (details <a href="#scope">below</a>): <b>Timeline</b>, <b>Phase</b> and <b>Spectrum</b>. <b>Hold</b> next to them freezes the picture. The green <b>TEST</b> strip on the right fires a test hit: higher click = harder hit.</td></tr>
   <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change. At the ends of their ranges (20 Hz and 20000 Hz) they are off.</td><td>off</td></tr>
   <tr><td><b>Channels</b></td><td><b>Original</b> and <b>Smp 1–6</b>: trace tick, fader, <b>M</b>, <b>S</b>, <b>Ø</b>, <b>ENV</b>, <b>EQ</b>, <b>Pan</b>, <b>Tune</b>, and a plate with the sample name (the Original has <b>EQ</b>).</td></tr>
-  <tr><td><b>Right panel</b></td><td><b>Full Auto</b>, <b>Auto Threshold</b>, <b>Auto Phase</b>, <b>Auto</b> (a menu with the other auto tools), <b>REC MIDI</b>, <b>Browser</b>, <b>Reset phase</b> (all offsets and polarity to zero), <b>Clear samples</b>.</td></tr>
+  <tr><td><b>Right panel</b></td><td><b>Full Auto</b>, <b>Auto Threshold</b>, <b>Auto Phase</b>, <b>Auto menu</b> (the other auto tools), <b>REC MIDI</b>, <b>Browser</b>, <b>Reset phase</b> (all offsets and polarity to zero), <b>Clear samples</b>.</td></tr>
   <tr><td><b>Header</b></td><td>Click the logo: the web site. The name: <b>About</b> (version, licence, check for updates, manual, Telegram). The version number: the list of changes.</td></tr>
   <tr><td><b>Outputs</b></td><td><b>Output</b> carries everything. There are 7 more stereo outputs: <b>Original</b> and <b>Smp 1 … Smp 6</b>. Press <b>OUT</b> on a channel to send it to its own output (it then leaves the main Output) and route that output to a track in your DAW. In REAPER: right-click the plugin name in the FX chain → <b>Build multichannel routing for output of selected FX</b>.</td></tr>
 </table>
@@ -229,18 +229,16 @@
 <p><b>Auto → Track phase on every hit</b> fine-tunes the start of each sample by up to ±2 ms. It works best on a clean track.</p>
 
 <h1 id="auto">11. Auto</h1>
-<p>The main tools have buttons of their own in the right panel: <b>Full Auto</b>, <b>Auto Threshold</b> and <b>Auto Phase</b>. The <b>Auto</b> button opens a menu with the others. While a tool listens to the music, its button blinks. Every result can be undone with <b>Undo</b>.</p>
+<p>The main tools have buttons of their own in the right panel: <b>Full Auto</b>, <b>Auto Threshold</b> and <b>Auto Phase</b>. The <b>Auto menu</b> button opens a menu with the others. While a tool listens to the music, its button blinks. Every result can be undone with <b>Undo</b>.</p>
 <table>
   <tr><th style="width:230px">Button / menu item</th><th>What it does</th></tr>
   <tr><td><b>Full Auto</b> (button)</td><td>Sets Threshold, Retrigger, Sensitivity and Input and aligns the phase of each sample.</td></tr>
-  <tr><td><b>Whole signal / Bass</b></td><td>The part of the signal used for the analysis. Bass for a kick, whole signal for a snare.</td></tr>
   <tr><td><b>Auto Phase</b> (button)</td><td>Finds the Offset and Ø of each sample.</td></tr>
   <tr><td><b>Track phase on every hit</b></td><td>Switches phase tracking on or off.</td></tr>
   <tr><td><b>Match samples to the original</b></td><td>Sets sample levels from the loudness of the original.</td></tr>
   <tr><td><b>Make samples equally loud</b></td><td>Evens out the samples; no music needed.</td></tr>
   <tr><td><b>For best sound</b></td><td>Sets the levels of the samples for a modern kick sound (set the phase first).</td></tr>
   <tr><td><b>Auto Threshold</b> (button)</td><td>Sets only the detector: Threshold, Retrigger, Sensitivity and Input.</td></tr>
-  <tr><td><b>Start playback automatically</b></td><td>Works only in some DAWs.</td></tr>
 </table>
 <p>The tools need sound: start playback.</p>
 
