@@ -13,7 +13,7 @@
 xattr -dr com.apple.quarantine "/Library/Audio/Plug-Ins/VST3/Best Trigger 3.vst3"
 ```
 
-(Free version: `Best Trigger 3 Free.vst3`.) Restart the DAW and rescan.
+Restart the DAW and rescan.
 
 ## Русский
 
@@ -26,4 +26,4 @@ xattr -dr com.apple.quarantine "/Library/Audio/Plug-Ins/VST3/Best Trigger 3.vst3
 xattr -dr com.apple.quarantine "/Library/Audio/Plug-Ins/VST3/Best Trigger 3.vst3"
 ```
 
-(Бесплатная версия: `Best Trigger 3 Free.vst3`.) Перезапустите DAW и пересканируйте.
+Перезапустите DAW и пересканируйте.

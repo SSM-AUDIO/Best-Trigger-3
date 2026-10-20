@@ -110,7 +110,7 @@
   <li>Press <b>Start 14-day trial</b> or enter your key (see <a href="#versions">Trial and licence</a>).</li>
   <li>Put samples in: drop a file on a plate, right-click the plate, or open the <b>Browser</b>. A click on a plate plays it (further right = harder).</li>
   <li>To hear the original too, raise the <b>Original</b> fader to 0 dB (it starts at −∞).</li>
-  <li>Start playback and choose <b>Auto → Full Auto</b>: the plugin listens to the music and sets the threshold, the phase of the samples and their levels.</li>
+  <li>Start playback and choose <b>Full Auto</b> (button in the right panel): the plugin listens to the music and sets the threshold, the phase of the samples and their levels.</li>
   <li>Look at the result on the scope: <b>Timeline</b> (the hits), <b>Phase</b> (the last hit), <b>Spectrum</b> (the frequency response).</li>
 </ol>
 
@@ -120,9 +120,9 @@
   <tr><th style="width:170px">Area</th><th>Purpose</th></tr>
   <tr><td><b>Top panel</b></td><td><b>A / B / Copy</b>, <b>Undo / Redo</b> (5 steps), <b>Presets</b>, IN/OUT meters, master output knob, gear menu (a red dot means a new version).</td></tr>
   <tr><td><b>Scope</b></td><td>Three views, one button each at the bottom right of the scope (details <a href="#scope">below</a>): <b>Timeline</b>, <b>Phase</b> and <b>Spectrum</b>. <b>Hold</b> next to them freezes the picture. The green <b>TEST</b> strip on the right fires a test hit: higher click = harder hit.</td></tr>
-  <tr><td><b>Sum panel</b></td><td>The round tick shows the sum of the traces that are shown. <b>Release</b>, <b>Orig Gate</b>, <b>Dynamics</b>, <b>Humanize</b>, <b>Input</b>, <b>Threshold</b> (the same as the red line on the scope), <b>Volumes</b> (moves all sample faders together) and <b>Pitch All</b> (all Tune knobs together). Ctrl + drag of any sample fader or Tune knob does the same; <b>Low Cut / High Cut</b> filters for the detector.</td></tr>
-  <tr><td><b>Channels</b></td><td><b>Original</b> and <b>Smp 1–6</b>: trace tick, fader, <b>M</b>, <b>S</b>, <b>Ø</b>, <b>ENV</b>, <b>EQ</b>, <b>Pan</b>, <b>Tune</b>, and a plate with the sample name (the Original has <b>0 ms</b> and <b>EQ</b>).</td></tr>
-  <tr><td><b>Right panel</b></td><td><b>Auto</b>, <b>REC MIDI</b>, <b>Browser</b>, <b>Reset phase</b> (all offsets and polarity to zero), <b>Clear samples</b>.</td></tr>
+  <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change. At the ends of their ranges (20 Hz and 20000 Hz) they are off.</td><td>off</td></tr>
+  <tr><td><b>Channels</b></td><td><b>Original</b> and <b>Smp 1–6</b>: trace tick, fader, <b>M</b>, <b>S</b>, <b>Ø</b>, <b>ENV</b>, <b>EQ</b>, <b>Pan</b>, <b>Tune</b>, and a plate with the sample name (the Original has <b>EQ</b>).</td></tr>
+  <tr><td><b>Right panel</b></td><td><b>Full Auto</b>, <b>Auto Threshold</b>, <b>Auto Phase</b>, <b>Auto</b> (a menu with the other auto tools), <b>REC MIDI</b>, <b>Browser</b>, <b>Reset phase</b> (all offsets and polarity to zero), <b>Clear samples</b>.</td></tr>
   <tr><td><b>Header</b></td><td>Click the logo: the web site. The name: <b>About</b> (version, licence, check for updates, manual, Telegram). The version number: the list of changes.</td></tr>
   <tr><td><b>Outputs</b></td><td><b>Output</b> carries everything. There are 7 more stereo outputs: <b>Original</b> and <b>Smp 1 … Smp 6</b>. Press <b>OUT</b> on a channel to send it to its own output (it then leaves the main Output) and route that output to a track in your DAW. In REAPER: right-click the plugin name in the FX chain → <b>Build multichannel routing for output of selected FX</b>.</td></tr>
 </table>
@@ -156,22 +156,21 @@
 <p>A preset stores all settings and loaded samples. The <b>Presets</b> button opens the list; use <b>Save</b>, <b>Save as…</b>, <b>Delete</b> and <b>Initialize</b> (default settings). The arrows step through presets, and Undo takes a loaded preset back.</p>
 
 <h1 id="detect">6. Hit detection</h1>
-<p>Set these on the scope in the <b>Timeline</b> view. A double-click on a value box lets you type a number.</p>
+<p>Set these on the scope in the <b>Timeline</b> view. Drag a value box up or down to change it (Shift = finer; the wheel over it changes it a little); a double-click lets you type a number.</p>
 <table>
   <tr><th style="width:130px">Parameter</th><th>Meaning</th><th style="width:90px">Default</th></tr>
-  <tr><td><b>Threshold</b></td><td>The level above which the signal is a hit. Drag the red lines.</td><td>−30 dB</td></tr>
-  <tr><td><b>Sensitivity</b></td><td>How quickly the detector is ready again. Higher = safer against doubles, lower = catches fast hits. Drag the yellow lines.</td><td>50%</td></tr>
-  <tr><td><b>Retrigger</b></td><td>The dead time after a hit. Drag the edge of the purple zone.</td><td>40 ms</td></tr>
-  <tr><td><b>Soft</b> and <b>Input</b></td><td>The strength of a hit (which velocity layer plays and how loud) is measured on a scale from <b>Soft</b> (velocity 0, the green line low on the Timeline) to <b>Input</b> (velocity 127, the dashed green line; it may go up to +12 dB). The Threshold is only where a hit is noticed, so a hit just over it is not forced to velocity 0. The defaults (Soft −19 dB, Input −6.9 dB) give the velocity layers and the level inside a layer the way the well-known trigger plays them: a harder hit changes the layer and, inside a layer, is a little louder. Click the Soft box to switch the line on, drag it or double-click to type a value; 0 = off, and then the scale begins at the Threshold (projects made earlier keep it this way).</td></tr>
-  <tr><td><b>Converted <code>.tci</code> instruments</b></td><td>They are played at the sample rate written in the file, exactly as the well-known trigger plays them, in a project of any rate. Instruments converted by an earlier version are converted again from their <code>.tci</code> when you run the conversion again.</td></tr>
-  <tr><td><b>Input</b></td><td>The level of your loudest hits: they play the hardest layer. Full Auto sets it; or drag the green <b>Loud</b> line.</td><td>0 dB</td></tr>
+  <tr><td><b>Threshold</b></td><td>The level above which the signal is a hit. Drag the red lines. If the threshold of the Sensitivity (below) is higher, that one decides.</td><td>−12 dB</td></tr>
+  <tr><td><b>Sensitivity</b></td><td>0–100. The lower it is, the louder a hit has to be to be noticed: it sets a threshold of its own (very high at 0–5, about −6 dB at 10, about −22 dB at 50, about −41 dB at 100). The higher of this threshold and the Threshold decides. Drag the box up or down, or double-click and type.</td><td>50</td></tr>
+  <tr><td><b>Retrigger</b></td><td>The dead time after a hit. Drag the edge of the purple zone, or the Retrigger box up or down.</td><td>40 ms</td></tr>
+  
+    <tr><td><b>Input</b></td><td>How a hit is turned into a velocity: the velocity is <b>proportional to the peak</b> of the hit, and a hit that peaks at the Input level is velocity 127 (the loudest layer). The default (−6 dB) is the scale of the well-known trigger: layers and the level inside a layer behave as they do there. Full Auto sets it to your loudest hits; or drag the green <b>Loud</b> line. The Threshold is only where a hit is noticed.</td><td>−6 dB</td></tr>
   <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change.</td><td>—</td></tr>
 </table>
 <p><b>Dynamics</b>: 1.00 = the hit strength fully controls the layer and loudness; 0 = always the hardest layer at full level.</p>
 <ol class="steps">
   <li>Start playback; the wheel zooms the time window, <b>Hold</b> freezes the picture; the height fits itself.</li>
   <li>Drag the red lines so that real hits cross them and unwanted sounds stay below.</li>
-  <li>Crosses mark sounds skipped by Retrigger. Real hits crossed out: lower Retrigger or Sensitivity. Several lines on one hit: raise them.</li>
+  <li>Crosses mark sounds skipped by Retrigger. Real hits crossed out: lower Retrigger. Several lines on one hit: raise Retrigger or the Threshold.</li>
 </ol>
 <div class="tip"><b>Tip.</b> With a lot of bleed from other drums, put a gate before Best Trigger.</div>
 
@@ -188,7 +187,7 @@
   <tr><td><b>Tick</b></td><td>Shows or hides the trace on the scope.</td></tr>
   <tr><td><b>Fader</b></td><td>Level, −∞ to +24 dB. Original starts at −∞, samples at 0 dB.</td></tr>
   <tr><td><b>M / S</b></td><td>Mute and Solo. Right-click <b>M</b>, <b>S</b> or <b>Ø</b>: only this channel gets it, all the others lose it (a quick way to listen to one).</td></tr>
-  <tr><td><b>Latency</b></td><td>The original is delayed by the plugin latency (36 ms; the DAW makes up for it) so that samples can start before it and be moved earlier with a negative Offset.</td></tr>
+  <tr><td><b>Latency</b></td><td>The original is delayed by the plugin latency (39 ms; the DAW makes up for it) so that samples can start before it and be moved earlier with a negative Offset.</td></tr>
   <tr><td><b>Ø</b></td><td>Flips the phase of the sample.</td></tr>
   <tr><td><b>ENV</b></td><td>Attack, Sustain and Release of the sample.</td></tr>
   <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Drag the dots; the wheel over a bell changes its width (Q); a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). Low Cut and High Cut also have a <b>Slope</b>: 6, 12, 18 or 24 dB per octave (12 is the usual one). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
@@ -216,30 +215,31 @@
   <li><b>Online libraries…</b>: free libraries with a cover and the author's text. Choose one and press <b>Download and install</b>.</li>
   <li><b>WAV to .bt3…</b>: turns WAV files into <code>.bt3</code> files (one file per sample, smaller and quicker to load): the selected file or folder, or the whole library. The <code>.bt3</code> is put next to the WAV; existing ones are never overwritten. Afterwards you are asked whether to delete the source WAV files (they go to the Recycle Bin).</li>
   <li><b>Migration…</b>: converts a <code>.tci</code> library into <code>.bt3</code> files. Choose the folder; the files are created in your library. Convert only free samples or your own.</li>
+  <li><b>Converted <code>.tci</code> instruments</b> are played at the sample rate written in the file and at the volumes written in it (how loud each layer plays at its lowest and highest velocity), exactly as the well-known trigger plays them. Instruments converted by an earlier version are converted again from their <code>.tci</code> when you run the conversion again.</li>
 </ul>
 
 <h1 id="phase">10. Phase</h1>
 <p>Next to each sample name is a role button: <b>LEAD</b> (lined up with the original; the first LEAD sample is the leader), <b>FOL</b> (moves together with the leader: rooms and overheads) and <b>ALIGN</b> (finds its own offset and polarity against the leader, without music: Out, Sub). Samples of one set also play the same take on every hit.</p>
 <p>A sample played with the original can thin out the sound if their waves cancel. Press the <b>Phase</b> button on the scope to see the last hit: the original, the samples and their sum.</p>
 <ol class="steps">
-  <li>Click a <b>Smp</b> box at the top of the scope and drag the graph left or right to move that sample's Offset (±30 ms; <kbd>Shift</kbd> = finer, double-click the graph = 0). With several samples selected, they all move together.</li>
+  <li>Click a <b>Smp</b> box at the top of the scope and drag the graph left or right to move that sample's Offset (±30 ms; <kbd>Shift</kbd> = finer, double-click the graph = 0), or drag the box up or down. With several samples selected, they all move together.</li>
   <li>If the first waves go in opposite directions, press <b>Ø</b>.</li>
   <li>Watch <b>Sum gain</b>: green (+1.5 dB or more) is good, red (below −1.5 dB) means the channels cancel.</li>
 </ol>
 <p><b>Auto → Track phase on every hit</b> fine-tunes the start of each sample by up to ±2 ms. It works best on a clean track.</p>
 
 <h1 id="auto">11. Auto</h1>
-<p>While a tool listens to the music, the Auto button blinks. Every result can be undone with <b>Undo</b>.</p>
+<p>The main tools have buttons of their own in the right panel: <b>Full Auto</b>, <b>Auto Threshold</b> and <b>Auto Phase</b>. The <b>Auto</b> button opens a menu with the others. While a tool listens to the music, its button blinks. Every result can be undone with <b>Undo</b>.</p>
 <table>
-  <tr><th style="width:230px">Item</th><th>What it does</th></tr>
-  <tr><td><b>Full Auto</b></td><td>Sets Threshold, Retrigger, Sensitivity and Input and aligns the phase of each sample.</td></tr>
+  <tr><th style="width:230px">Button / menu item</th><th>What it does</th></tr>
+  <tr><td><b>Full Auto</b> (button)</td><td>Sets Threshold, Retrigger, Sensitivity and Input and aligns the phase of each sample.</td></tr>
   <tr><td><b>Whole signal / Bass</b></td><td>The part of the signal used for the analysis. Bass for a kick, whole signal for a snare.</td></tr>
-  <tr><td><b>Align phase</b></td><td>Finds the Offset and Ø of each sample.</td></tr>
+  <tr><td><b>Auto Phase</b> (button)</td><td>Finds the Offset and Ø of each sample.</td></tr>
   <tr><td><b>Track phase on every hit</b></td><td>Switches phase tracking on or off.</td></tr>
   <tr><td><b>Match samples to the original</b></td><td>Sets sample levels from the loudness of the original.</td></tr>
   <tr><td><b>Make samples equally loud</b></td><td>Evens out the samples; no music needed.</td></tr>
   <tr><td><b>For best sound</b></td><td>Sets the levels of the samples for a modern kick sound (set the phase first).</td></tr>
-  <tr><td><b>Learn Threshold and Retrigger</b></td><td>Sets only the detector: Threshold, Retrigger, Sensitivity and Input.</td></tr>
+  <tr><td><b>Auto Threshold</b> (button)</td><td>Sets only the detector: Threshold, Retrigger, Sensitivity and Input.</td></tr>
   <tr><td><b>Start playback automatically</b></td><td>Works only in some DAWs.</td></tr>
 </table>
 <p>The tools need sound: start playback.</p>
@@ -260,14 +260,14 @@
   <tr><td><b>MIDI in / out note</b></td><td>The notes.</td></tr>
   <tr><td><b>Sample library</b></td><td>The library folder and migration.</td></tr>
   <tr><td><b>Auto trim</b></td><td>Off by default: when on, it lowers the output knob by what goes over 0 dB; never raises it. The letter A in the knob shows it; Ctrl + click on the knob switches it (Cmd + click on a Mac), as does the settings menu.</td></tr>
-  <tr><td><b>Precise sample start</b></td><td>On by default (gear menu). The samples start at the real beginning of the hit, as in the well-known trigger, whatever the Threshold is. Switched off, a sample starts at the moment the signal crosses the Threshold, a few milliseconds late (more for soft hits). Projects made before this setting existed have it off, so they sound as before. Not used with the <b>0 ms</b> switch.</td></tr>
+  <tr><td><b>Precise sample start</b></td><td>On by default (gear menu). The samples start at the real beginning of the hit, as in the well-known trigger, whatever the Threshold is. Switched off, a sample starts at the moment the signal crosses the Threshold, a few milliseconds late (more for soft hits). Projects made before this setting existed have it off, so they sound as before.</td></tr>
   <tr><td><b>Remember last samples / settings</b></td><td>A new plugin starts with your last samples and/or settings. Both are off by default; a saved project always opens with its own samples.</td></tr>
   <tr><td><b>Help improve Best Trigger</b></td><td>Usage statistics and error reports; off until you agree.</td></tr>
   <tr><td><b>Quick start guide…, Manual, Website</b></td><td>Help.</td></tr>
   <tr><td><b>Check for updates</b></td><td>Green when a new version is out.</td></tr>
   <tr><td><b>About, License…</b></td><td>Version and licence.</td></tr>
 </table>
-<p>The plugin reports a latency of about 36 ms to the DAW, which compensates for it. Do not monitor live playing through the plugin.</p>
+<p>The plugin reports a latency of about 39 ms to the DAW, which compensates for it. Do not monitor live playing through the plugin.</p>
 
 <h1 id="trouble">14. Troubleshooting</h1>
 <table>
@@ -277,8 +277,8 @@
   <tr><td>"Locked" / "Missing" on a plate</td><td>Locked: activate the plugin. Missing: load the file again.</td></tr>
   <tr><td>No sound from the samples</td><td>See section 7.</td></tr>
   <tr><td>Only the sample is heard</td><td>Raise the Original fader.</td></tr>
-  <tr><td>A hit triggers twice</td><td>Raise Retrigger and/or Sensitivity.</td></tr>
-  <tr><td>Fast hits are missed</td><td>Lower Retrigger and/or Sensitivity.</td></tr>
+  <tr><td>A hit triggers twice</td><td>Raise Retrigger (or the Threshold).</td></tr>
+  <tr><td>Fast hits are missed</td><td>Lower Retrigger. Quiet hits are missed: lower the Threshold and raise Sensitivity.</td></tr>
   <tr><td>It triggers on other drums</td><td>Raise Threshold, narrow the detector filters, or put a gate before the plugin.</td></tr>
   <tr><td>Thin sound, Sum gain red</td><td>Press Ø or move the Offset (section 10).</td></tr>
   <tr><td>A multisample plays upside down</td><td>Rename the files (section 8).</td></tr>
