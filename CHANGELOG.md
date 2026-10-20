@@ -4,6 +4,10 @@
 
 ## English
 
+### 0.3.5
+- The **Auto** button is now **Auto menu**. In it, the choice of what the phase is measured on (**Phase detection wide range / narrow range**) moved into the **Phase** section.
+- The menu item for starting playback automatically is removed.
+
 ### 0.3.4
 - **Velocity is read the way the well-known trigger reads it:** it is proportional to the peak of the hit, and a hit at the **Input** level (−6 dB by default) is velocity 127. The **Soft** control is gone. Quiet hits of the first layer start from silence and grow louder, as in the well-known trigger. Older projects may sound a little different: check **Input**.
 - **Sensitivity** is now a second threshold (the higher the number, the lower it is); the louder of the two thresholds decides. At 100 only the **Threshold** decides.
@@ -129,6 +133,10 @@
 - First release.
 
 ## Русский
+
+### 0.3.5
+- Кнопка **Auto** теперь **Auto menu**. В ней выбор, по чему измеряется фаза (**Phase detection wide range / narrow range**), перенесён в раздел **Phase**.
+- Пункт меню автозапуска воспроизведения убран.
 
 ### 0.3.4
 - **Velocity считается так же, как в известном триггере:** она пропорциональна пику удара, а удар на уровне **Input** (по умолчанию −6 дБ) даёт velocity 127. Параметр **Soft** убран. Тихие удары первого слоя начинаются с тишины и становятся громче, как в известном триггере. Старые проекты могут звучать немного иначе: проверьте **Input**.

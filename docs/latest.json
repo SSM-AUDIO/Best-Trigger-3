@@ -1,5 +1,5 @@
 {
-  "version": "0.3.4",
+  "version": "0.3.5",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Velocity is read the way the well-known trigger reads it: it is proportional to the peak of the hit, and a hit at the Input level (−6 dB by default) is velocity 127. The Soft control is gone. Quiet hits of the first layer start from silence and grow louder, as in the well-known trigger. Older projects may sound a little different: check Input.\nSensitivity is now a second threshold (the higher the number, the lower it is); the louder of the two thresholds decides. At 100 only the Threshold decides."
+  "notes": "The Auto button is now Auto menu. In it, the choice of what the phase is measured on (Phase detection wide range / narrow range) moved into the Phase section.\nThe menu item for starting playback automatically is removed."
 }
