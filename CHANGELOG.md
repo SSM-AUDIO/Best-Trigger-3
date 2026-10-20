@@ -4,6 +4,13 @@
 
 ## English
 
+### 0.3.6
+- **EQ window: live spectrum.** Behind the curve you see the spectrum of the channel: the filled area is the sound after the EQ (so you see what your changes do), the thin line is the sound before it. The **Spectrum** button switches it off. It does not load the plugin's audio.
+- **EQ gain up to ±30 dB** for bells and shelves. The picture zooms out by itself (3, 6, 12, 30 dB) when you drag a dot towards its edge.
+- **Low Cut and High Cut slopes: 36 and 48 dB per octave** are added (6, 12, 18, 24, 36, 48). The mouse wheel over a cut dot changes its slope.
+- **Library browser:** the right-click menu of a sample or folder has **Show in Explorer** (Show in Finder on a Mac) at the bottom.
+- **Sensitivity** starts at 100 in a new plugin, so only the **Threshold** decides at first. Saved projects keep their value.
+
 ### 0.3.5
 - The **Auto** button is now **Auto menu**. In it, the choice of what the phase is measured on (**Phase detection wide range / narrow range**) moved into the **Phase** section.
 - The menu item for starting playback automatically is removed.
@@ -133,6 +140,13 @@
 - First release.
 
 ## Русский
+
+### 0.3.6
+- **Окно EQ: живой спектр.** За кривой виден спектр канала: закрашенная область — звук после EQ (видно, что делают ваши изменения), тонкая линия — звук до него. Кнопка **Spectrum** выключает его. На звуковую часть плагина он не влияет.
+- **Усиление EQ до ±30 дБ** у колоколов и полок. Масштаб картинки сам увеличивается (3, 6, 12, 30 дБ), когда вы тянете точку к краю.
+- **Крутизна Low Cut и High Cut: добавлены 36 и 48 дБ на октаву** (6, 12, 18, 24, 36, 48). Колесо мыши над точкой среза меняет крутизну.
+- **Браузер библиотек:** в меню по правому клику на семпле или папке внизу есть **Show in Explorer** (на Mac — Show in Finder).
+- **Sensitivity** у нового плагина стоит на 100, поэтому сначала решает только **Threshold**. Сохранённые проекты сохраняют своё значение.
 
 ### 0.3.5
 - Кнопка **Auto** теперь **Auto menu**. В ней выбор, по чему измеряется фаза (**Phase detection wide range / narrow range**), перенесён в раздел **Phase**.

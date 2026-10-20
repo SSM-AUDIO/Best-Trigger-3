@@ -1,5 +1,5 @@
 {
-  "version": "0.3.5",
+  "version": "0.3.6",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "The Auto button is now Auto menu. In it, the choice of what the phase is measured on (Phase detection wide range / narrow range) moved into the Phase section.\nThe menu item for starting playback automatically is removed."
+  "notes": "EQ window: live spectrum. Behind the curve you see the spectrum of the channel: the filled area is the sound after the EQ (so you see what your changes do), the thin line is the sound before it. The Spectrum button switches it off. It does not load the plugin's audio.\nEQ gain up to ±30 dB for bells and shelves. The picture zooms out by itself (3, 6, 12, 30 dB) when you drag a dot towards its edge.\nLow Cut and High Cut slopes: 36 and 48 dB per octave are added (6, 12, 18, 24, 36, 48). The mouse wheel over a cut dot changes its slope."
 }
