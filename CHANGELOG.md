@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.8
+- **Fast rolls:** with a low Threshold, a hit that follows another one closely sometimes got too low a velocity. Fixed: every hit of a roll gets its full velocity.
+- **Phase view:** the picture and the **Sum gain** now include the EQ of every channel (Low Cut, shelves, bells), so they match what you hear. The pan is counted too.
+- **Auto tools:** a right click on the blinking button stops the running tool.
+
 ### 0.3.7
 - **Move a whole channel:** drag the name of a channel (**Smp 3** at the top of its strip) onto another channel. The two channels swap places with the sample and everything set for it (level, mute, solo, phase, pan, tune, envelope, filters, EQ, role, Offset). With **Ctrl / Cmd** the channel is copied instead. The **OUT** switch stays where it is. Dragging the name plate still swaps only the samples.
 - **Window size:** drag the grip in the bottom right corner to change the size of the window (50–300%). The size is remembered; a double click on the grip sets 100%.
@@ -146,6 +151,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.8
+- **Быстрые роллы:** при низком Threshold удар, идущий сразу за другим, иногда получал заниженную velocity. Исправлено: каждый удар ролла получает полную velocity.
+- **Вид Phase:** картинка и индикатор **Sum gain** теперь учитывают EQ каждого канала (Low Cut, полки, колокола), так что совпадают с тем, что вы слышите. Учтён и пан.
+- **Auto-инструменты:** правый щелчок по мигающей кнопке останавливает работающий инструмент.
 
 ### 0.3.7
 - **Перенос целого канала:** перетащите название канала (**Smp 3** вверху полосы) на другой канал. Два канала меняются местами вместе с сэмплом и всем, что для него настроено (уровень, mute, solo, фаза, пан, Tune, огибающая, фильтры, EQ, роль, Offset). С **Ctrl / Cmd** канал копируется. Переключатель **OUT** остаётся на месте. Перетаскивание плашки с именем по-прежнему меняет только сэмплы.

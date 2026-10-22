@@ -1,5 +1,5 @@
 {
-  "version": "0.3.7",
+  "version": "0.3.8",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Move a whole channel: drag the name of a channel (Smp 3 at the top of its strip) onto another channel. The two channels swap places with the sample and everything set for it (level, mute, solo, phase, pan, tune, envelope, filters, EQ, role, Offset). With Ctrl / Cmd the channel is copied instead. The OUT switch stays where it is. Dragging the name plate still swaps only the samples.\nWindow size: drag the grip in the bottom right corner to change the size of the window (50–300%). The size is remembered; a double click on the grip sets 100%."
+  "notes": "Fast rolls: with a low Threshold, a hit that follows another one closely sometimes got too low a velocity. Fixed: every hit of a roll gets its full velocity.\nPhase view: the picture and the Sum gain now include the EQ of every channel (Low Cut, shelves, bells), so they match what you hear. The pan is counted too.\nAuto tools: a right click on the blinking button stops the running tool."
 }
