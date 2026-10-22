@@ -4,6 +4,12 @@
 
 ## English
 
+### 0.3.7
+- **Move a whole channel:** drag the name of a channel (**Smp 3** at the top of its strip) onto another channel. The two channels swap places with the sample and everything set for it (level, mute, solo, phase, pan, tune, envelope, filters, EQ, role, Offset). With **Ctrl / Cmd** the channel is copied instead. The **OUT** switch stays where it is. Dragging the name plate still swaps only the samples.
+- **Window size:** drag the grip in the bottom right corner to change the size of the window (50–300%). The size is remembered; a double click on the grip sets 100%.
+- **Licence** button moved to the right panel, under **Clear samples**.
+- **Copy** (A/B) no longer opens a menu: it copies the setting that is on onto the other one.
+
 ### 0.3.6
 - **EQ window: live spectrum.** Behind the curve you see the spectrum of the channel: the filled area is the sound after the EQ (so you see what your changes do), the thin line is the sound before it. The **Spectrum** button switches it off. It does not load the plugin's audio.
 - **EQ gain up to ±30 dB** for bells and shelves. The picture zooms out by itself (3, 6, 12, 30 dB) when you drag a dot towards its edge.
@@ -140,6 +146,12 @@
 - First release.
 
 ## Русский
+
+### 0.3.7
+- **Перенос целого канала:** перетащите название канала (**Smp 3** вверху полосы) на другой канал. Два канала меняются местами вместе с сэмплом и всем, что для него настроено (уровень, mute, solo, фаза, пан, Tune, огибающая, фильтры, EQ, роль, Offset). С **Ctrl / Cmd** канал копируется. Переключатель **OUT** остаётся на месте. Перетаскивание плашки с именем по-прежнему меняет только сэмплы.
+- **Размер окна:** тяните уголок в правом нижнем углу, чтобы менять размер окна (50–300%). Размер запоминается; двойной щелчок по уголку — 100%.
+- Кнопка **Licence** переехала в правую панель, под **Clear samples**.
+- **Copy** (A/B) больше не открывает меню: сразу копирует включённую настройку на другую.
 
 ### 0.3.6
 - **Окно EQ: живой спектр.** За кривой виден спектр канала: закрашенная область — звук после EQ (видно, что делают ваши изменения), тонкая линия — звук до него. Кнопка **Spectrum** выключает его. На звуковую часть плагина он не влияет.

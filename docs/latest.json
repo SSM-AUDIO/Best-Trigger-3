@@ -1,5 +1,5 @@
 {
-  "version": "0.3.6",
+  "version": "0.3.7",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "EQ window: live spectrum. Behind the curve you see the spectrum of the channel: the filled area is the sound after the EQ (so you see what your changes do), the thin line is the sound before it. The Spectrum button switches it off. It does not load the plugin's audio.\nEQ gain up to ±30 dB for bells and shelves. The picture zooms out by itself (3, 6, 12, 30 dB) when you drag a dot towards its edge.\nLow Cut and High Cut slopes: 36 and 48 dB per octave are added (6, 12, 18, 24, 36, 48). The mouse wheel over a cut dot changes its slope."
+  "notes": "Move a whole channel: drag the name of a channel (Smp 3 at the top of its strip) onto another channel. The two channels swap places with the sample and everything set for it (level, mute, solo, phase, pan, tune, envelope, filters, EQ, role, Offset). With Ctrl / Cmd the channel is copied instead. The OUT switch stays where it is. Dragging the name plate still swaps only the samples.\nWindow size: drag the grip in the bottom right corner to change the size of the window (50–300%). The size is remembered; a double click on the grip sets 100%."
 }
