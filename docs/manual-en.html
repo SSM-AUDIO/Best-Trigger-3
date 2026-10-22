@@ -179,6 +179,7 @@
 <ul>
   <li>drop a file on a plate, or right-click the plate: <b>Load sample or .bt3 file…</b>, <b>Load folder (multisample)…</b>, <b>Save multisample file (.bt3)…</b>, <b>Copy sample</b> and <b>Paste sample</b> (the same sample into another channel), <b>Rename…</b> (the name on the plate; it is saved with the project), <b>Copy sample name</b> (name and extension, to the clipboard), <b>Clear sample</b>. WAV, AIFF, FLAC.</li>
   <li>Drag a plate onto another plate: the two samples swap places (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> held: a copy is put there and the first stays). Levels, pan and the other settings stay with the channels.</li>
+  <li>Drag the name of a channel (<b>Smp 3</b> at the top of the strip) onto another channel: the two channels swap places with the sample and everything set for it: level, mute, solo, phase, pan, tune, envelope, filters, EQ, role and Offset (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> held: the first channel is copied onto the second). The <b>OUT</b> switch stays where it is, because it belongs to the output routing in your DAW. If a channel's parameters are automated in the DAW, the automation stays with the channel number, not with the sample. A sample that is sounding at that moment finishes with the new settings.</li>
   <li><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + click on plates, or a frame drawn over the empty part of the mixer, selects samples (white border). In the Phase view, dragging the Offset of one selected sample moves all the selected ones by the same amount. A click on an empty place clears the selection.</li>
   <li>A click on a plate plays only that sample with all its settings; further right = harder.</li>
 </ul>
@@ -253,7 +254,7 @@
 <h1 id="settings">13. Settings (the gear)</h1>
 <table>
   <tr><th style="width:230px">Item</th><th>What it does</th></tr>
-  <tr><td><b>Interface scale</b></td><td>Window size, 70–200%.</td></tr>
+  <tr><td><b>Interface scale</b></td><td>Window size, 70–200%. You can also drag the grip in the bottom right corner of the window (50–300%; a double click: 100%); the size is remembered.</td></tr>
   <tr><td><b>Scope smoothing…</b></td><td>Smooths the picture only.</td></tr>
   <tr><td><b>Trigger source</b></td><td>Audio or MIDI.</td></tr>
   <tr><td><b>MIDI in / out note</b></td><td>The notes.</td></tr>
