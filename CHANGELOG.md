@@ -4,6 +4,10 @@
 
 ## English
 
+### 0.3.9
+- **Undo works as expected:** every control is a step of its own (even when you change two controls quickly one after the other), **A** and **B** each keep their own history, clicks that change nothing and the scope smoothing are no longer steps, and **Copy** can be undone. **Undo / Redo** now keep the last 20 steps.
+- **Video lessons:** a new item in the gear menu opens our YouTube channel. The link is also in the manual and on the download page.
+
 ### 0.3.8
 - **Fast rolls:** with a low Threshold, a hit that follows another one closely sometimes got too low a velocity. Fixed: every hit of a roll gets its full velocity.
 - **Phase view:** the picture and the **Sum gain** now include the EQ of every channel (Low Cut, shelves, bells), so they match what you hear. The pan is counted too.
@@ -151,6 +155,10 @@
 - First release.
 
 ## Русский
+
+### 0.3.9
+- **Undo работает как ожидается:** каждый регулятор — отдельный шаг (даже если вы быстро меняете два регулятора подряд), у **A** и **B** своя история, клики без изменений и сглаживание осциллографа больше не считаются шагами, а **Copy** можно отменить. **Undo / Redo** хранят последние 20 шагов.
+- **Видеоуроки:** новый пункт в меню-шестерёнке открывает наш канал на YouTube. Ссылка есть и в мануале, и на странице скачивания.
 
 ### 0.3.8
 - **Быстрые роллы:** при низком Threshold удар, идущий сразу за другим, иногда получал заниженную velocity. Исправлено: каждый удар ролла получает полную velocity.

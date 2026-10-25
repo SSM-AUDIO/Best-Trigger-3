@@ -1,5 +1,5 @@
 {
-  "version": "0.3.8",
+  "version": "0.3.9",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Fast rolls: with a low Threshold, a hit that follows another one closely sometimes got too low a velocity. Fixed: every hit of a roll gets its full velocity.\nPhase view: the picture and the Sum gain now include the EQ of every channel (Low Cut, shelves, bells), so they match what you hear. The pan is counted too.\nAuto tools: a right click on the blinking button stops the running tool."
+  "notes": "Undo works as expected: every control is a step of its own (even when you change two controls quickly one after the other), A and B each keep their own history, clicks that change nothing and the scope smoothing are no longer steps, and Copy can be undone. Undo / Redo now keep the last 20 steps.\nVideo lessons: a new item in the gear menu opens our YouTube channel. The link is also in the manual and on the download page."
 }
