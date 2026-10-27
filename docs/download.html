@@ -10,7 +10,10 @@
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.55 "Segoe UI", system-ui, Arial, sans-serif; }
   .page { max-width:1180px; margin:0 auto; padding:24px 28px 56px; }
-  .page + .page { border-top:1px solid var(--line); }
+  body:not(.ru) [data-lang="ru"], body.ru [data-lang="en"] { display:none !important; }
+  .lang { display:inline-flex; margin-left:10px; vertical-align:middle; border:1px solid var(--line); border-radius:99px; overflow:hidden; }
+  .lang button { font:inherit; font-weight:600; background:none; color:var(--ink); border:0; padding:10px 16px; cursor:pointer; }
+  .lang button.on { background:var(--pill); color:var(--pill-ink); }
   header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:34px; }
   .brand { display:flex; align-items:center; gap:12px; font-size:26px; font-weight:600; letter-spacing:.5px; text-decoration:none; color:var(--ink); }
   .brand img { height:44px; filter:var(--logo-filter); }
@@ -28,67 +31,54 @@
   .dl svg { width:22px; height:22px; fill:none; stroke:var(--pill-ink); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
   .note { color:var(--muted); margin:0; }
   .shot img { width:100%; height:auto; border-radius:10px; display:block; box-shadow:0 6px 24px rgba(0,0,0,.18); }
-  @media (max-width:860px) { .cols { grid-template-columns:1fr; } h1 { font-size:38px; } .top a { padding:10px 18px; } }
+  @media (max-width:860px) { .cols { grid-template-columns:1fr; } h1 { font-size:38px; } .top a { padding:10px 18px; } .lang button { padding:10px 12px; } }
 </style>
 </head>
 <body>
 
-<div class="page" id="english">
+<div class="page">
   <header>
-    <a class="brand" href="#english"><img src="images/ssm-logo.png" alt="">SSM-Audio</a>
-    <div class="top"><a class="shop" href="https://ssm-audio.github.io/Best-Trigger-3/payment.html">buy</a> <a class="shop" href="https://ssm-audio.github.io/Best-Trigger-3/manual-en.html">Manual</a> <a class="shop" href="https://www.youtube.com/@SSM-AUDIO">Video</a> <a href="#russian">Русский</a></div>
+    <a class="brand" href="https://ssm-audio.github.io/"><img src="images/ssm-logo.png" alt="">SSM-Audio</a>
+    <div class="top"><a class="shop" href="https://ssm-audio.github.io/Best-Trigger-3/payment.html"><span data-lang="en">buy</span><span data-lang="ru">купить</span></a> <a class="shop" data-lang="en" href="https://ssm-audio.github.io/Best-Trigger-3/manual-en.html">Manual</a><a class="shop" data-lang="ru" href="https://ssm-audio.github.io/Best-Trigger-3/manual-ru.html">Мануал</a> <a class="shop" href="https://www.youtube.com/@SSM-AUDIO"><span data-lang="en">Video</span><span data-lang="ru">Видео</span></a><span class="lang" role="group" aria-label="Language"><button id="b-en" type="button">EN</button><button id="b-ru" type="button">RU</button></span></div>
   </header>
   <div class="cols">
     <div>
       <h1>Best Trigger 3</h1>
-      <p class="tag">set up drum triggers, save time</p>
+      <p class="tag"><span data-lang="en">set up drum triggers, save time</span><span data-lang="ru">настройте триггеры барабанов, сэкономьте время</span></p>
       <ul>
-        <li>Finds every hit on a recorded drum track and plays your samples on it</li>
-        <li>Full Auto sets the threshold, the phase and the balance for you</li>
-        <li>Up to six samples per hit, phase aligned automatically</li>
-        <li>See what you hear: Timeline, Phase and Spectrum views</li>
-        <li>VST3 plugin for Windows and macOS</li>
+        <li><span data-lang="en">Finds every hit on a recorded drum track and plays your samples on it</span><span data-lang="ru">Находит каждый удар на записанной дорожке барабана и играет на нём ваши сэмплы</span></li>
+        <li><span data-lang="en">Full Auto sets the threshold, the phase and the balance for you</span><span data-lang="ru">Full Auto сам подбирает порог, фазу и баланс</span></li>
+        <li><span data-lang="en">Up to six samples per hit, phase aligned automatically</span><span data-lang="ru">До шести сэмплов на удар, фаза выравнивается автоматически</span></li>
+        <li><span data-lang="en">See what you hear: Timeline, Phase and Spectrum views</span><span data-lang="ru">Видно, что вы слышите: виды Timeline, Phase и Spectrum</span></li>
+        <li><span data-lang="en">VST3 plugin for Windows and macOS</span><span data-lang="ru">Плагин VST3 для Windows и macOS</span></li>
       </ul>
-      <a class="news" href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/CHANGELOG.md#english">what's new in Best Trigger 3</a>
-      <div class="dl" id="get-en">
-        <a class="win" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span>download for Win</a>
-        <a class="mac" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span>download for Mac</a>
+      <a class="news" data-lang="en" href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/CHANGELOG.md#english">what's new in Best Trigger 3</a><a class="news" data-lang="ru" href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/CHANGELOG.md#русский">что нового в Best Trigger 3</a>
+      <div class="dl" id="get">
+        <a class="win" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span><span data-lang="en">download for Win</span><span data-lang="ru">скачать для Win</span></a>
+        <a class="mac" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span><span data-lang="en">download for Mac</span><span data-lang="ru">скачать для Mac</span></a>
       </div>
-      <p class="note">Includes a fully featured 14-day trial.</p>
+      <p class="note"><span data-lang="en">Includes a fully featured 14-day trial.</span><span data-lang="ru">Включает полноценный пробный период 14 дней.</span></p>
     </div>
-    <div class="shot"><img src="images/best-trigger-3.png" alt="The Best Trigger 3 window"></div>
-  </div>
-</div>
-
-<div class="page" id="russian">
-  <header>
-    <a class="brand" href="#russian"><img src="images/ssm-logo.png" alt="">SSM-Audio</a>
-    <div class="top"><a class="shop" href="https://ssm-audio.github.io/Best-Trigger-3/payment.html">купить</a> <a class="shop" href="https://ssm-audio.github.io/Best-Trigger-3/manual-ru.html">Мануал</a> <a class="shop" href="https://www.youtube.com/@SSM-AUDIO">Видео</a> <a href="#english">English</a></div>
-  </header>
-  <div class="cols">
-    <div>
-      <h1>Best Trigger 3</h1>
-      <p class="tag">настройте триггеры барабанов, сэкономьте время</p>
-      <ul>
-        <li>Находит каждый удар на записанной дорожке барабана и играет на нём ваши сэмплы</li>
-        <li>Full Auto сам подбирает порог, фазу и баланс</li>
-        <li>До шести сэмплов на удар, фаза выравнивается автоматически</li>
-        <li>Видно, что вы слышите: виды Timeline, Phase и Spectrum</li>
-        <li>Плагин VST3 для Windows и macOS</li>
-      </ul>
-      <a class="news" href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/CHANGELOG.md#русский">что нового в Best Trigger 3</a>
-      <div class="dl" id="get-ru">
-        <a class="win" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span>скачать для Win</a>
-        <a class="mac" href="https://github.com/SSM-AUDIO/Best-Trigger-3/releases/latest"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14"/></svg></span>скачать для Mac</a>
-      </div>
-      <p class="note">Включает полноценный пробный период 14 дней.</p>
-    </div>
-    <div class="shot"><img src="images/best-trigger-3.png" alt="Окно Best Trigger 3"></div>
+    <div class="shot"><img src="images/best-trigger-3.png" alt="Best Trigger 3"></div>
   </div>
 </div>
 
 <script>
 (function () {
+  // the language: the same choice as on the SSM-Audio main page (one browser storage for the whole site); old links #russian / #english still work
+  var lang = (location.hash === '#russian') ? 'ru' : (location.hash === '#english') ? 'en' : null;
+  if (!lang) { try { lang = localStorage.getItem('ssm-lang'); } catch (e) {} }
+  if (lang !== 'ru' && lang !== 'en') lang = ((navigator.language || 'en').slice(0, 2) === 'ru') ? 'ru' : 'en';
+  function show() {
+    document.body.className = lang === 'ru' ? 'ru' : '';
+    document.documentElement.lang = lang;
+    document.getElementById('b-en').className = lang === 'en' ? 'on' : '';
+    document.getElementById('b-ru').className = lang === 'ru' ? 'on' : '';
+  }
+  function pick(l) { lang = l; try { localStorage.setItem('ssm-lang', l); } catch (e) {} show(); }
+  document.getElementById('b-en').onclick = function () { pick('en'); };
+  document.getElementById('b-ru').onclick = function () { pick('ru'); };
+  show();
   fetch('https://api.github.com/repos/SSM-AUDIO/Best-Trigger-3/releases/latest').then(function (r) { return r.json(); }).then(function (rel) {
     (rel.assets || []).forEach(function (a) {
       var cls = /\.exe$/i.test(a.name) ? 'win' : (/\.pkg$/i.test(a.name) ? 'mac' : '');
