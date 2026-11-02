@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.10
+- **Cut filters go to the end of the range:** Low Cut and High Cut of the channel EQ (and of the detector) now cover 20 Hz to 20 kHz; before, High Cut could not go below 1 kHz and Low Cut above 2 kHz.
+- **Copy / Paste channel settings:** two new items in the right-click menu of a plate copy all the numbers of a channel (fader, pan, EQ and the rest, not the sample) onto another channel. One step of Undo.
+- Swapping or copying a channel by dragging is now one step of Undo too.
+
 ### 0.3.9
 - **Undo works as expected:** every control is a step of its own (even when you change two controls quickly one after the other), **A** and **B** each keep their own history, clicks that change nothing and the scope smoothing are no longer steps, and **Copy** can be undone. **Undo / Redo** now keep the last 20 steps.
 - **Video lessons:** a new item in the gear menu opens our YouTube channel. The link is also in the manual and on the download page.
@@ -155,6 +160,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.10
+- **Срезы доходят до конца диапазона:** Low Cut и High Cut в EQ канала (и в детекторе) теперь покрывают от 20 Гц до 20 кГц; раньше High Cut нельзя было опустить ниже 1 кГц, а Low Cut поднять выше 2 кГц.
+- **Copy / Paste channel settings:** два новых пункта в меню правой кнопки по плашке копируют все числа канала (фейдер, pan, EQ и остальное, без сэмпла) на другой канал. Один шаг Undo.
+- Перенос и копирование канала перетаскиванием теперь тоже один шаг Undo.
 
 ### 0.3.9
 - **Undo работает как ожидается:** каждый регулятор — отдельный шаг (даже если вы быстро меняете два регулятора подряд), у **A** и **B** своя история, клики без изменений и сглаживание осциллографа больше не считаются шагами, а **Copy** можно отменить. **Undo / Redo** хранят последние 20 шагов.

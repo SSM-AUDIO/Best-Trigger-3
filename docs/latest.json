@@ -1,5 +1,5 @@
 {
-  "version": "0.3.9",
+  "version": "0.3.10",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Undo works as expected: every control is a step of its own (even when you change two controls quickly one after the other), A and B each keep their own history, clicks that change nothing and the scope smoothing are no longer steps, and Copy can be undone. Undo / Redo now keep the last 20 steps.\nVideo lessons: a new item in the gear menu opens our YouTube channel. The link is also in the manual and on the download page."
+  "notes": "Cut filters go to the end of the range: Low Cut and High Cut of the channel EQ (and of the detector) now cover 20 Hz to 20 kHz; before, High Cut could not go below 1 kHz and Low Cut above 2 kHz.\nCopy / Paste channel settings: two new items in the right-click menu of a plate copy all the numbers of a channel (fader, pan, EQ and the rest, not the sample) onto another channel. One step of Undo.\nSwapping or copying a channel by dragging is now one step of Undo too."
 }

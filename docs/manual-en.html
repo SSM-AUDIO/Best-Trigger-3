@@ -40,7 +40,7 @@
 <header class="top">
   <h1>BEST TRIGGER 3</h1>
   <div class="sub">User Manual</div>
-  <div class="ver">Version 0.3.9 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a> · <a href="https://ssm-audio.github.io/Best-Trigger-3/download.html">Download</a> · <a href="https://ssm-audio.github.io/Best-Trigger-3/payment.html">Buy</a> · <a href="https://www.youtube.com/@SSM-AUDIO">Video lessons</a></div>
+  <div class="ver">Version 0.3.10 · VST3 · Windows 10/11 · macOS · <a href="manual-ru.html">Русская версия</a> · <a href="https://ssm-audio.github.io/Best-Trigger-3/download.html">Download</a> · <a href="https://ssm-audio.github.io/Best-Trigger-3/payment.html">Buy</a> · <a href="https://www.youtube.com/@SSM-AUDIO">Video lessons</a></div>
 </header>
 <main>
 
@@ -121,7 +121,7 @@
   <tr><th style="width:170px">Area</th><th>Purpose</th></tr>
   <tr><td><b>Top panel</b></td><td><b>A / B / Copy</b> (Copy puts the setting that is on onto the other one), <b>Undo / Redo</b> (20 steps; A and B each have their own history), <b>Presets</b>, IN/OUT meters, master output knob, gear menu (a red dot means a new version).</td></tr>
   <tr><td><b>Scope</b></td><td>Three views, one button each at the bottom right of the scope (details <a href="#scope">below</a>): <b>Timeline</b>, <b>Phase</b> and <b>Spectrum</b>. <b>Hold</b> next to them freezes the picture. The green <b>TEST</b> strip on the right fires a test hit: higher click = harder hit.</td></tr>
-  <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change. At the ends of their ranges (20 Hz and 20000 Hz) they are off.</td><td>off</td></tr>
+  <tr><td><b>Low Cut / High Cut</b></td><td>Filters for the detector only; the sound does not change. Low Cut at 20 Hz and High Cut at 20000 Hz are off; both go through the whole range, 20 Hz to 20 kHz.</td><td>off</td></tr>
   <tr><td><b>Channels</b></td><td><b>Original</b> and <b>Smp 1–6</b>: trace tick, fader, <b>M</b>, <b>S</b>, <b>Ø</b>, <b>ENV</b>, <b>EQ</b>, <b>Pan</b>, <b>Tune</b>, and a plate with the sample name (the Original has <b>EQ</b>).</td></tr>
   <tr><td><b>Right panel</b></td><td><b>Full Auto</b>, <b>Auto Threshold</b>, <b>Auto Phase</b>, <b>Auto menu</b> (the other auto tools), <b>REC MIDI</b>, <b>Browser</b>, <b>Reset phase</b> (all offsets and polarity to zero), <b>Clear samples</b>, and below it the <b>licence</b> button (trial days left, activation).</td></tr>
   <tr><td><b>Header</b></td><td>Click the logo: the web site. The name: <b>About</b> (version, licence, check for updates, manual, Telegram). The version number: the list of changes.</td></tr>
@@ -178,7 +178,7 @@
 <h1 id="samples">7. Samples and mixer</h1>
 <p>On every hit all loaded samples play at once.</p>
 <ul>
-  <li>drop a file on a plate, or right-click the plate: <b>Load sample or .bt3 file…</b>, <b>Load folder (multisample)…</b>, <b>Save multisample file (.bt3)…</b>, <b>Copy sample</b> and <b>Paste sample</b> (the same sample into another channel), <b>Rename…</b> (the name on the plate; it is saved with the project), <b>Copy sample name</b> (name and extension, to the clipboard), <b>Clear sample</b>. WAV, AIFF, FLAC.</li>
+  <li>drop a file on a plate, or right-click the plate: <b>Load sample or .bt3 file…</b>, <b>Load folder (multisample)…</b>, <b>Save multisample file (.bt3)…</b>, <b>Copy sample</b> and <b>Paste sample</b> (the same sample into another channel), <b>Copy channel settings</b> and <b>Paste channel settings</b> (all the numbers of the channel, fader, pan, EQ and the rest, onto another channel; the sample and OUT stay), <b>Rename…</b> (the name on the plate; it is saved with the project), <b>Copy sample name</b> (name and extension, to the clipboard), <b>Clear sample</b>. WAV, AIFF, FLAC.</li>
   <li>Drag a plate onto another plate: the two samples swap places (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> held: a copy is put there and the first stays). Levels, pan and the other settings stay with the channels.</li>
   <li>Drag the name of a channel (<b>Smp 3</b> at the top of the strip) onto another channel: the two channels swap places with the sample and everything set for it: level, mute, solo, phase, pan, tune, envelope, filters, EQ, role and Offset (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd> held: the first channel is copied onto the second). The <b>OUT</b> switch stays where it is, because it belongs to the output routing in your DAW. If a channel's parameters are automated in the DAW, the automation stays with the channel number, not with the sample. A sample that is sounding at that moment finishes with the new settings.</li>
   <li><kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + click on plates, or a frame drawn over the empty part of the mixer, selects samples (white border). In the Phase view, dragging the Offset of one selected sample moves all the selected ones by the same amount. A click on an empty place clears the selection.</li>
@@ -192,7 +192,7 @@
   <tr><td><b>Latency</b></td><td>The original is delayed by the plugin latency (39 ms; the DAW makes up for it) so that samples can start before it and be moved earlier with a negative Offset.</td></tr>
   <tr><td><b>Ø</b></td><td>Flips the phase of the sample.</td></tr>
   <tr><td><b>ENV</b></td><td>Attack, Sustain and Release of the sample.</td></tr>
-  <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Behind the curve the window shows the live spectrum of this channel: the filled area is the sound after the EQ, so you see what your changes do, and the thin line is the sound before it (the <b>Spectrum</b> button switches it off). Drag the dots; the wheel over a bell changes its width (Q), over a cut its slope; the gain of a bell or shelf goes up to ±30 dB, and the picture zooms out by itself when a dot goes towards its edge; a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). Low Cut and High Cut also have a <b>Slope</b>: 6, 12, 18, 24, 36 or 48 dB per octave (12 is the usual one). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
+  <tr><td><b>EQ</b></td><td>An equaliser for this channel, the Original too: Low Cut, Low Shelf, three Bells, High Shelf and High Cut. A click opens the EQ window over the scope (the scope buttons are hidden until you close it). Behind the curve the window shows the live spectrum of this channel: the filled area is the sound after the EQ, so you see what your changes do, and the thin line is the sound before it (the <b>Spectrum</b> button switches it off). Drag the dots; the wheel over a bell changes its width (Q), over a cut its slope; the gain of a bell or shelf goes up to ±30 dB, and the picture zooms out by itself when a dot goes towards its edge; a double click on a dot resets it; a right click on a dot switches that filter off and on and keeps its numbers. The numbers of the selected dot are shown at the bottom left and can be typed (<code>1500</code>, <code>1.5k</code>, gain in dB). Low Cut and High Cut go through the whole range (20 Hz to 20 kHz) and also have a <b>Slope</b>: 6, 12, 18, 24, 36 or 48 dB per octave (12 is the usual one). The arrows <b>▲ ▼</b> change the height of the picture: 3, 6, 12 or 30 dB. A right click on the <b>EQ</b> button switches the whole EQ of the channel off and on. The Low Cut and High Cut that samples had before are the Low Cut and High Cut of this EQ, so older projects sound the same.</td></tr>
   <tr><td><b>Pan, Tune</b></td><td>Pan L100…R100; pitch ±24 semitones.</td></tr>
   <tr><td><b>Release</b></td><td><b>Auto</b> (default): a new hit fades out the previous sample of the same channel by itself, faster on fast parts. <b>off</b> keeps the tails; or set a time.</td></tr>
   <tr><td><b>Orig Gate</b></td><td>After a hit the original stays audible for this time, then closes. The further right, the shorter; all the way left = off.</td></tr>
@@ -291,7 +291,7 @@
 <p>The plugin uses the JUCE framework, TweetNaCl and a method from the tci2wav project (MIT). Licence texts: <a href="https://github.com/SSM-AUDIO/Best-Trigger-3/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>. VST is a trademark of Steinberg Media Technologies GmbH.</p>
 <footer>
   <b>© 2026 SSM-Audio. All rights reserved.</b><br>
-  Best Trigger 3 · version 0.3.9
+  Best Trigger 3 · version 0.3.10
 </footer>
 </main>
 </body>
