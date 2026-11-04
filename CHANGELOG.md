@@ -4,6 +4,12 @@
 
 ## English
 
+### 0.3.11
+- **Envelope on / off:** a right click on the **ENV** button of a channel switches its envelope off and on again; the numbers stay.
+- **Channels selected with Ctrl + click change together:** with two or more channels selected, what you change with the mouse on one of them (fader, Pan, Tune, M / S / Ø / OUT, the EQ window, the envelope) is done on all of them.
+- **EQ window:** the numbers of a dot (Frequency, Gain, Q) can be dragged up and down with the mouse (**Shift** = finer); the **shelves** have a **Slope** now: 6, 12, 18 or 24 dB per octave.
+- **Hold:** a window opened again now shows the real state of the **Hold** button (the scope could stay frozen with the button looking released).
+
 ### 0.3.10
 - **Cut filters go to the end of the range:** Low Cut and High Cut of the channel EQ (and of the detector) now cover 20 Hz to 20 kHz; before, High Cut could not go below 1 kHz and Low Cut above 2 kHz.
 - **Copy / Paste channel settings:** two new items in the right-click menu of a plate copy all the numbers of a channel (fader, pan, EQ and the rest, not the sample) onto another channel. One step of Undo.
@@ -160,6 +166,12 @@
 - First release.
 
 ## Русский
+
+### 0.3.11
+- **Огибающая включается и выключается:** правый щелчок по кнопке **ENV** канала выключает и снова включает его огибающую; числа остаются.
+- **Каналы, выделенные Ctrl + щелчком, меняются вместе:** если выделено два канала и больше, всё, что вы меняете мышью на одном из них (фейдер, Pan, Tune, M / S / Ø / OUT, окно EQ, огибающая), делается на всех.
+- **Окно EQ:** числа точки (Frequency, Gain, Q) можно перетаскивать мышью вверх и вниз (**Shift** — точнее); у **полок** теперь есть **Slope**: 6, 12, 18 или 24 дБ на октаву.
+- **Hold:** окно, открытое снова, теперь показывает настоящее состояние кнопки **Hold** (экран мог оставаться замороженным, а кнопка выглядела отпущенной).
 
 ### 0.3.10
 - **Срезы доходят до конца диапазона:** Low Cut и High Cut в EQ канала (и в детекторе) теперь покрывают от 20 Гц до 20 кГц; раньше High Cut нельзя было опустить ниже 1 кГц, а Low Cut поднять выше 2 кГц.

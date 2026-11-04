@@ -1,5 +1,5 @@
 {
-  "version": "0.3.10",
+  "version": "0.3.11",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Cut filters go to the end of the range: Low Cut and High Cut of the channel EQ (and of the detector) now cover 20 Hz to 20 kHz; before, High Cut could not go below 1 kHz and Low Cut above 2 kHz.\nCopy / Paste channel settings: two new items in the right-click menu of a plate copy all the numbers of a channel (fader, pan, EQ and the rest, not the sample) onto another channel. One step of Undo.\nSwapping or copying a channel by dragging is now one step of Undo too."
+  "notes": "Envelope on / off: a right click on the ENV button of a channel switches its envelope off and on again; the numbers stay.\nChannels selected with Ctrl + click change together: with two or more channels selected, what you change with the mouse on one of them (fader, Pan, Tune, M / S / Ø / OUT, the EQ window, the envelope) is done on all of them.\nEQ window: the numbers of a dot (Frequency, Gain, Q) can be dragged up and down with the mouse (Shift = finer); the shelves have a Slope now: 6, 12, 18 or 24 dB per octave."
 }
