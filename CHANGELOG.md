@@ -4,6 +4,9 @@
 
 ## English
 
+### 0.3.12
+- **Activation data:** when the plug-in runs in a program it does not recognise, it now reports the file name of that program (no folder, no user name) instead of just "Unknown". Nothing else changes.
+
 ### 0.3.11
 - **Envelope on / off:** a right click on the **ENV** button of a channel switches its envelope off and on again; the numbers stay.
 - **Channels selected with Ctrl + click change together:** with two or more channels selected, what you change with the mouse on one of them (fader, Pan, Tune, M / S / Ø / OUT, the EQ window, the envelope) is done on all of them.
@@ -166,6 +169,9 @@
 - First release.
 
 ## Русский
+
+### 0.3.12
+- **Данные активации:** если плагин запущен в программе, которую он не узнаёт, он теперь сообщает имя файла этой программы (без папки и имени пользователя), а не просто «Unknown». Больше ничего не меняется.
 
 ### 0.3.11
 - **Огибающая включается и выключается:** правый щелчок по кнопке **ENV** канала выключает и снова включает его огибающую; числа остаются.
