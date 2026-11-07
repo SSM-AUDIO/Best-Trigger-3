@@ -1,5 +1,5 @@
 {
-  "version": "0.3.11",
+  "version": "0.3.12",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Envelope on / off: a right click on the ENV button of a channel switches its envelope off and on again; the numbers stay.\nChannels selected with Ctrl + click change together: with two or more channels selected, what you change with the mouse on one of them (fader, Pan, Tune, M / S / Ø / OUT, the EQ window, the envelope) is done on all of them.\nEQ window: the numbers of a dot (Frequency, Gain, Q) can be dragged up and down with the mouse (Shift = finer); the shelves have a Slope now: 6, 12, 18 or 24 dB per octave."
+  "notes": "Activation data: when the plug-in runs in a program it does not recognise, it now reports the file name of that program (no folder, no user name) instead of just \"Unknown\". Nothing else changes."
 }
