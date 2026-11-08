@@ -1,5 +1,5 @@
 {
-  "version": "0.3.12",
+  "version": "0.3.13",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Activation data: when the plug-in runs in a program it does not recognise, it now reports the file name of that program (no folder, no user name) instead of just \"Unknown\". Nothing else changes."
+  "notes": "Match to a reference (experimental): pick one hit and the plug-in looks through your library for the samples whose sum sounds like it, and puts the answer into the mixer. Choose the drum (Kick / Snare / Tom), the range, the most samples, the time limit, and optionally Tune; a library cache makes the search start at once. The search goes on in the background even if you close the window; Stop keeps the answers found so far, and the window shows the time it took. It works with a licence key, not in the 14-day trial. Details in the manual."
 }
