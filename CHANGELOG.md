@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.13
+- **Match to a reference (experimental):** pick one hit and the plug-in looks through your library for the samples whose sum sounds like it, and puts the answer into the mixer. Choose the drum (Kick / Snare / Tom), the range, the most samples, the time limit, and optionally **Tune**; a library **cache** makes the search start at once. The search goes on in the background even if you close the window; **Stop** keeps the answers found so far, and the window shows the time it took. It works with a **licence key**, not in the 14-day trial. Details in the manual.
+- **Mono per sample:** **Alt + click** (**Opt** on a Mac) on the **Pan** knob of a sample plays it as mono; the same click takes it back.
+- **Update notice:** the plug-in can tell you when this version is too old to work and where to download the new one. Nothing changes for a current version.
+
 ### 0.3.12
 - **Activation data:** when the plug-in runs in a program it does not recognise, it now reports the file name of that program (no folder, no user name) instead of just "Unknown". Nothing else changes.
 
@@ -169,6 +174,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.13
+- **Подбор по референсу (экспериментальная функция):** выберите один удар, и плагин переберёт вашу библиотеку в поисках семплов, чья сумма звучит как он, и положит ответ в микшер. Выбираются барабан (Kick / Snare / Tom), диапазон, наибольшее число семплов, лимит времени и при желании **Tune**; **кэш** библиотеки позволяет начинать поиск сразу. Поиск идёт в фоне, даже если закрыть окно; **Stop** оставляет найденное, а окно показывает, сколько времени заняла работа. Работает с **лицензионным ключом**, в 14-дневном триале недоступно. Подробности в руководстве.
+- **Моно для каждого семпла:** **Alt + щелчок** (**Opt** на Mac) по ручке **Pan** семпла включает моно; тот же щелчок возвращает как было.
+- **Уведомление об обновлении:** плагин может сообщить, что эта версия устарела и перестала работать, и где скачать новую. У актуальной версии ничего не меняется.
 
 ### 0.3.12
 - **Данные активации:** если плагин запущен в программе, которую он не узнаёт, он теперь сообщает имя файла этой программы (без папки и имени пользователя), а не просто «Unknown». Больше ничего не меняется.
