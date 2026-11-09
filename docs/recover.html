@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Потерял ключ — Lost key — SSM-Audio</title>
+<style>
+  :root { color-scheme: light dark; --bg:#f8f7f4; --ink:#1b2233; --muted:#5d6572; --pill:#dceaf3; --pill-ink:#17365d; --line:#e0ddd5; --link:#2c6a8e; --surface:rgba(255,255,255,.42); }
+  @media (prefers-color-scheme: dark) { :root { --bg:#14161a; --ink:#e9ebf0; --muted:#a0a6b2; --pill:#303e55; --pill-ink:#f2f4f8; --line:#2c3038; --link:#8cc2e6; --surface:rgba(255,255,255,.025); } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.55 "Segoe UI",system-ui,Arial,sans-serif; }
+  .page { max-width:680px; margin:0 auto; padding:24px 20px 44px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:12px; padding-bottom:16px; margin-bottom:28px; border-bottom:1px solid var(--line); }
+  header a { color:var(--ink); text-decoration:none; font-weight:650; }
+  .lang button { border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:6px 12px; font:inherit; cursor:pointer; }
+  .lang button.on { background:var(--pill); color:var(--pill-ink); font-weight:700; }
+  h1 { font-size:34px; line-height:1.15; margin:0 0 12px; }
+  p { color:var(--muted); }
+  form { display:flex; flex-wrap:wrap; gap:10px; margin:20px 0; }
+  input { flex:1 1 240px; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:var(--bg); color:var(--ink); font:inherit; }
+  button.go { padding:12px 26px; border-radius:99px; border:0; background:var(--pill); color:var(--pill-ink); font:inherit; font-weight:700; cursor:pointer; }
+  .key { display:block; margin:10px 0; padding:14px 16px; border-radius:14px; border:1px solid var(--line); background:var(--surface); }
+  .key code { display:block; font:600 22px/1.4 Consolas,monospace; color:var(--ink); word-break:break-all; user-select:all; }
+  .key small { color:var(--muted); }
+  .msg { margin-top:14px; }
+  .bad { color:#d9534f; }
+  a { color:var(--link); }
+  [data-lang] { display:none; }
+  html[lang=ru] [data-lang=ru], html[lang=en] [data-lang=en] { display:revert; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a href="https://ssm-audio.github.io/Best-Trigger-3/download.html">SSM-Audio — Best Trigger 3</a>
+    <span class="lang"><button id="b-en" type="button">EN</button><button id="b-ru" type="button">RU</button></span>
+  </header>
+
+  <h1><span data-lang="ru">Потерял ключ?</span><span data-lang="en">Lost your key?</span></h1>
+  <p data-lang="ru">Введите e-mail, который вы указали при покупке на этом сайте. Мы покажем ключ(и) этого заказа. Письмо не отправляется: ключ появится прямо здесь.</p>
+  <p data-lang="en">Enter the e-mail you gave when you paid on this site. The key(s) of that order will be shown right here; no e-mail is sent.</p>
+
+  <form id="f">
+    <input id="email" type="email" required autocomplete="email" placeholder="e-mail">
+    <button class="go" type="submit"><span data-lang="ru">Показать ключ</span><span data-lang="en">Show my key</span></button>
+  </form>
+  <div id="out" class="msg"></div>
+
+  <p data-lang="ru">Ключ привязан к одному компьютеру. Если вы купили ключ на plati.ru или в другом магазине, ключ вернёт тот магазин. Не получилось: <a href="https://t.me/ssm_metalmix">Telegram</a>.</p>
+  <p data-lang="en">A key belongs to one computer. A key bought elsewhere (for example plati.ru) is given back by that shop. No luck: <a href="https://t.me/ssm_metalmix">Telegram</a>.</p>
+</div>
+<script>
+(function () {
+  var SERVER = 'https://best-trigger-license.ssm-audio.workers.dev';
+  var T = {
+    ru: { none: 'Для этого адреса ничего не найдено. Проверьте адрес или напишите в Telegram.', bad: 'Введите e-mail, указанный при оплате.', limit: 'Слишком много попыток. Подождите час и повторите.', fail: 'Нет связи с сервером, повторите позже.', on: 'Уже активирован на компьютере', off: 'Ещё не активирован' },
+    en: { none: 'Nothing found for this address. Check it or write on Telegram.', bad: 'Please enter the e-mail you gave when you paid.', limit: 'Too many tries. Please wait an hour and try again.', fail: 'No connection to the server, try again later.', on: 'Already activated on a computer', off: 'Not activated yet' }
+  };
+  var lang = /^ru/i.test(navigator.language || '') ? 'ru' : 'en';
+  try { lang = localStorage.getItem('bt3lang') || lang; } catch (e) {}
+  function setLang(l) {
+    lang = l; document.documentElement.lang = l;
+    document.getElementById('b-en').className = l === 'en' ? 'on' : '';
+    document.getElementById('b-ru').className = l === 'ru' ? 'on' : '';
+    try { localStorage.setItem('bt3lang', l); } catch (e) {}
+  }
+  document.getElementById('b-en').onclick = function () { setLang('en'); };
+  document.getElementById('b-ru').onclick = function () { setLang('ru'); };
+  setLang(lang);
+
+  var out = document.getElementById('out');
+  function say(text, bad) { out.innerHTML = ''; var p = document.createElement('p'); p.textContent = text; if (bad) p.className = 'bad'; out.appendChild(p); }
+  document.getElementById('f').onsubmit = function (ev) {
+    ev.preventDefault();
+    out.innerHTML = '';
+    fetch(SERVER + '/v1/recover', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: document.getElementById('email').value }) })
+      .then(function (r) { return r.json(); })
+      .then(function (o) {
+        var t = T[lang];
+        if (!o.ok) return say(o.error === 'rate_limited' ? t.limit : (o.error === 'bad_email' ? t.bad : t.fail), true);
+        if (!o.found) return say(t.none, true);
+        o.keys.forEach(function (k) {
+          var d = document.createElement('div'); d.className = 'key';
+          var c = document.createElement('code'); c.textContent = k.key;
+          var s = document.createElement('small'); s.textContent = k.name + ' — ' + (k.activated ? t.on : t.off);
+          d.appendChild(c); d.appendChild(s); out.appendChild(d);
+        });
+      })
+      .catch(function () { say(T[lang].fail, true); });
+  };
+})();
+</script>
+</body>
+</html>
