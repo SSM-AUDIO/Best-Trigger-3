@@ -4,6 +4,10 @@
 
 ## English
 
+### 0.3.16
+- **Match in the trial.** In the 14-day trial you can now search with Match and **listen** to the answers (the play triangle plays the answer itself; your mixer is not touched). Putting an answer into the mixer, its list of samples and their names are part of the full version and need a licence key.
+- **LUNA** (Universal Audio) is recognised as a DAW.
+
 ### 0.3.15
 - **Lost your key?** The licence window has a link **Lost your key?**: on the page you enter the e-mail you gave when you paid and the key is shown (no e-mail is sent). On a computer where the key is already activated, the button **Show my key** shows it and copies it.
 - **More programs are recognised:** Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft and Renoise now work. If a program is still not recognised, the warning no longer disappears: it comes back every 40 seconds and the button in the corner of the window turns red.
@@ -184,6 +188,10 @@
 - First release.
 
 ## Русский
+
+### 0.3.16
+- **Подбор в триале.** В 14-дневном триале теперь можно искать подбором и **слушать** ответы (треугольник играет сам ответ, ваш микшер не трогается). Положить ответ в микшер, а также увидеть список его семплов и их названия можно только с лицензионным ключом.
+- **LUNA** (Universal Audio) распознаётся как DAW.
 
 ### 0.3.15
 - **Потеряли ключ?** В окне лицензии есть ссылка **Lost your key?**: на странице вводите e-mail, указанный при оплате, и ключ появляется на ней (письмо не отправляется). На компьютере, где ключ уже активирован, кнопка **Show my key** показывает его и копирует.
