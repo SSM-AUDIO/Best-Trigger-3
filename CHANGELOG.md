@@ -4,6 +4,9 @@
 
 ## English
 
+### 0.3.18
+- **Messages from SSM-Audio.** From time to time the plugin shows a short message in a window (news, an important update). Each message is shown once. To ask for it, the plugin sends only the product, its version, the language of your system and whether you are in the trial or licensed; nothing that names you. See the [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
+
 ### 0.3.17
 - **The trial asks for your e-mail.** To start the 14-day trial, type your e-mail address in the licence window. We use it for the trial and to write to you about new versions and features. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep and how to have it removed.
 
@@ -191,6 +194,9 @@
 - First release.
 
 ## Русский
+
+### 0.3.18
+- **Сообщения от SSM-Audio.** Время от времени плагин показывает короткое сообщение в окне (новости, важное обновление). Каждое сообщение показывается один раз. Чтобы его запросить, плагин отправляет только продукт, версию, язык вашей системы и то, в триале вы или с ключом; ничего, что называет вас. См. [политику конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
 
 ### 0.3.17
 - **Триал просит e-mail.** Чтобы начать 14-дневный триал, введите адрес электронной почты в окне лицензии. Мы используем его для триала и чтобы писать вам о новых версиях и возможностях. В [политике конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) написано, что мы храним и как это убрать.
