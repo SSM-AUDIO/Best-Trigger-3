@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.14
+- **Match is now part of the main window.** Click **Match** and the scope becomes a drop zone: drop one reference hit on it (an audio file, or a hit your DAW lets you drag out as a file) or click it to choose a file. While the search runs, the wave of the reference fills with colour, with the stage, the percentage and the time. The answers come as a list: each shows what it explains in all, in the body and in the top, and has buttons **Play**, **Apply**, **Top / Body** (the same samples with the levels fitted the other way, to compare in two clicks) and **i** (the samples with their levels). The **Phase** and **Spectrum** views of the scope show the answer you have put into the mixer against the reference. **Apply** brings the mixer back.
+- **Better and faster Match:** it finds the other layers and microphones of the same instrument (a layered snare, a close + room pair), it works with a **Top** option (the top of the sound counts more), it is 3-4 times faster, and a reference that begins with a pause is read correctly. New and changed files are added to the cache by themselves.
+- **Repair of sample paths:** when a project or a preset remembers a sample that was moved in your library or converted from a wav into a .bt3, the plugin finds it again (a setting, on by default).
+
 ### 0.3.13
 - **Match to a reference (experimental):** pick one hit and the plug-in looks through your library for the samples whose sum sounds like it, and puts the answer into the mixer. Choose the drum (Kick / Snare / Tom), the range, the most samples, the time limit, and optionally **Tune**; a library **cache** makes the search start at once. The search goes on in the background even if you close the window; **Stop** keeps the answers found so far, and the window shows the time it took. It works with a **licence key**, not in the 14-day trial. Details in the manual.
 - **Mono per sample:** **Alt + click** (**Opt** on a Mac) on the **Pan** knob of a sample plays it as mono; the same click takes it back.
@@ -174,6 +179,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.14
+- **Match теперь часть основного окна.** Нажмите **Match**, и осциллограф превращается в зону для референса: бросьте на него один удар (аудиофайл или удар, который ваш DAW позволяет вытащить файлом) или щёлкните по нему и выберите файл. Пока идёт поиск, волна референса заполняется цветом, видны этап, проценты и время. Ответы приходят списком: у каждого показано, сколько он объясняет в целом, в теле и в верхе, и есть кнопки **Play**, **Apply**, **Top / Body** (те же семплы с уровнями, подогнанными по-другому, чтобы сравнить за два щелчка) и **i** (семплы с их уровнями). Виды **Phase** и **Spectrum** осциллографа показывают положенный в микшер ответ против референса. **Apply** возвращает микшер.
+- **Match стал точнее и быстрее:** находит другие слои и микрофоны того же инструмента (слоистый снейр, пара close + room), есть опция **Top** (верх звука учитывается сильнее), он быстрее в 3–4 раза, а референс, который начинается с паузы, читается правильно. Новые и изменённые файлы сами попадают в кэш.
+- **Починка путей к семплам:** если проект или пресет помнит семпл, который переместили в библиотеке или сконвертировали из wav в .bt3, плагин находит его снова (настройка, по умолчанию включена).
 
 ### 0.3.13
 - **Подбор по референсу (экспериментальная функция):** выберите один удар, и плагин переберёт вашу библиотеку в поисках семплов, чья сумма звучит как он, и положит ответ в микшер. Выбираются барабан (Kick / Snare / Tom), диапазон, наибольшее число семплов, лимит времени и при желании **Tune**; **кэш** библиотеки позволяет начинать поиск сразу. Поиск идёт в фоне, даже если закрыть окно; **Stop** оставляет найденное, а окно показывает, сколько времени заняла работа. Работает с **лицензионным ключом**, в 14-дневном триале недоступно. Подробности в руководстве.
