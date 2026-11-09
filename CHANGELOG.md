@@ -4,6 +4,9 @@
 
 ## English
 
+### 0.3.17
+- **The trial asks for your e-mail.** To start the 14-day trial, type your e-mail address in the licence window. We use it for the trial and to write to you about new versions and features. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep and how to have it removed.
+
 ### 0.3.16
 - **Match in the trial.** In the 14-day trial you can now search with Match and **listen** to the answers (the play triangle plays the answer itself; your mixer is not touched). Putting an answer into the mixer, its list of samples and their names are part of the full version and need a licence key.
 - **LUNA** (Universal Audio) is recognised as a DAW.
@@ -188,6 +191,9 @@
 - First release.
 
 ## Русский
+
+### 0.3.17
+- **Триал просит e-mail.** Чтобы начать 14-дневный триал, введите адрес электронной почты в окне лицензии. Мы используем его для триала и чтобы писать вам о новых версиях и возможностях. В [политике конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) написано, что мы храним и как это убрать.
 
 ### 0.3.16
 - **Подбор в триале.** В 14-дневном триале теперь можно искать подбором и **слушать** ответы (треугольник играет сам ответ, ваш микшер не трогается). Положить ответ в микшер, а также увидеть список его семплов и их названия можно только с лицензионным ключом.

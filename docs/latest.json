@@ -1,5 +1,5 @@
 {
-  "version": "0.3.16",
+  "version": "0.3.17",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Match in the trial. In the 14-day trial you can now search with Match and listen to the answers (the play triangle plays the answer itself; your mixer is not touched). Putting an answer into the mixer, its list of samples and their names are part of the full version and need a licence key.\nLUNA (Universal Audio) is recognised as a DAW."
+  "notes": "The trial asks for your e-mail. To start the 14-day trial, type your e-mail address in the licence window. We use it for the trial and to write to you about new versions and features. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep and how to have it removed."
 }
