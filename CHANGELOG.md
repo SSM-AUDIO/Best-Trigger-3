@@ -4,6 +4,11 @@
 
 ## English
 
+### 0.3.15
+- **Lost your key?** The licence window has a link **Lost your key?**: on the page you enter the e-mail you gave when you paid and the key is shown (no e-mail is sent). On a computer where the key is already activated, the button **Show my key** shows it and copies it.
+- **More programs are recognised:** Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft and Renoise now work. If a program is still not recognised, the warning no longer disappears: it comes back every 40 seconds and the button in the corner of the window turns red.
+- **Plate names are kept** by presets, Undo and A/B (a renamed plate no longer goes back to the sample's name).
+
 ### 0.3.14
 - **Match is now part of the main window.** Click **Match** and the scope becomes a drop zone: drop one reference hit on it (an audio file, or a hit your DAW lets you drag out as a file) or click it to choose a file. While the search runs, the wave of the reference fills with colour, with the stage, the percentage and the time. The answers come as a list: each shows what it explains in all, in the body and in the top, and has buttons **Play**, **Apply**, **Top / Body** (the same samples with the levels fitted the other way, to compare in two clicks) and **i** (the samples with their levels). The **Phase** and **Spectrum** views of the scope show the answer you have put into the mixer against the reference. **Apply** brings the mixer back.
 - **Better and faster Match:** it finds the other layers and microphones of the same instrument (a layered snare, a close + room pair), it works with a **Top** option (the top of the sound counts more), it is 3-4 times faster, and a reference that begins with a pause is read correctly. New and changed files are added to the cache by themselves.
@@ -179,6 +184,11 @@
 - First release.
 
 ## Русский
+
+### 0.3.15
+- **Потеряли ключ?** В окне лицензии есть ссылка **Lost your key?**: на странице вводите e-mail, указанный при оплате, и ключ появляется на ней (письмо не отправляется). На компьютере, где ключ уже активирован, кнопка **Show my key** показывает его и копирует.
+- **Больше программ распознаётся:** теперь работает в Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft и Renoise. Если программа всё ещё не распознана, предупреждение больше не пропадает: оно возвращается каждые 40 секунд, а кнопка в углу окна становится красной.
+- **Имена плашек сохраняются** в пресетах, Undo и A/B (переименованная плашка больше не возвращается к имени семпла).
 
 ### 0.3.14
 - **Match теперь часть основного окна.** Нажмите **Match**, и осциллограф превращается в зону для референса: бросьте на него один удар (аудиофайл или удар, который ваш DAW позволяет вытащить файлом) или щёлкните по нему и выберите файл. Пока идёт поиск, волна референса заполняется цветом, видны этап, проценты и время. Ответы приходят списком: у каждого показано, сколько он объясняет в целом, в теле и в верхе, и есть кнопки **Play**, **Apply**, **Top / Body** (те же семплы с уровнями, подогнанными по-другому, чтобы сравнить за два щелчка) и **i** (семплы с их уровнями). Виды **Phase** и **Spectrum** осциллографа показывают положенный в микшер ответ против референса. **Apply** возвращает микшер.

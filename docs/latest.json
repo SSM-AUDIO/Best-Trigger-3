@@ -1,5 +1,5 @@
 {
-  "version": "0.3.14",
+  "version": "0.3.15",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Match is now part of the main window. Click Match and the scope becomes a drop zone: drop one reference hit on it (an audio file, or a hit your DAW lets you drag out as a file) or click it to choose a file. While the search runs, the wave of the reference fills with colour, with the stage, the percentage and the time. The answers come as a list: each shows what it explains in all, in the body and in the top, and has buttons Play, Apply, Top / Body (the same samples with the levels fitted the other way, to compare in two clicks) and i (the samples with their levels). The Phase and Spectrum views of the scope show the answer you have put into the mixer against the reference. Apply brings the mixer back."
+  "notes": "Lost your key? The licence window has a link Lost your key?: on the page you enter the e-mail you gave when you paid and the key is shown (no e-mail is sent). On a computer where the key is already activated, the button Show my key shows it and copies it.\nMore programs are recognised: Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft and Renoise now work. If a program is still not recognised, the warning no longer disappears: it comes back every 40 seconds and the button in the corner of the window turns red."
 }
