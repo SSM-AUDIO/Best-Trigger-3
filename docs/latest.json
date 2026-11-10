@@ -1,5 +1,5 @@
 {
-  "version": "0.3.18",
+  "version": "0.3.19",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Messages from SSM-Audio. From time to time the plugin shows a short message in a window (news, an important update). Each message is shown once. To ask for it, the plugin sends only the product, its version, the language of your system and whether you are in the trial or licensed; nothing that names you. See the [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html)."
+  "notes": "E-mail when you activate a key. The licence window now has an e-mail field for the key, too. It is needed when we do not have an e-mail for your key yet (for example a key bought on plati.ru); it is saved with your key, and the Lost your key? page can give the key back with it. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep."
 }

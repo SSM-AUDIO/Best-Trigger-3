@@ -4,6 +4,9 @@
 
 ## English
 
+### 0.3.19
+- **E-mail when you activate a key.** The licence window now has an e-mail field for the key, too. It is needed when we do not have an e-mail for your key yet (for example a key bought on plati.ru); it is saved with your key, and the **Lost your key?** page can give the key back with it. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep.
+
 ### 0.3.18
 - **Messages from SSM-Audio.** From time to time the plugin shows a short message in a window (news, an important update). Each message is shown once. To ask for it, the plugin sends only the product, its version, the language of your system and whether you are in the trial or licensed; nothing that names you. See the [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
 
@@ -194,6 +197,9 @@
 - First release.
 
 ## Русский
+
+### 0.3.19
+- **E-mail при активации ключа.** В окне лицензии теперь есть поле e-mail и для ключа. Он нужен, если у нас ещё нет почты для вашего ключа (например, ключ куплен на plati.ru); он сохраняется вместе с ключом, и по нему страница **«Потерял ключ?»** сможет вернуть ключ. В [политике конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) написано, что мы храним.
 
 ### 0.3.18
 - **Сообщения от SSM-Audio.** Время от времени плагин показывает короткое сообщение в окне (новости, важное обновление). Каждое сообщение показывается один раз. Чтобы его запросить, плагин отправляет только продукт, версию, язык вашей системы и то, в триале вы или с ключом; ничего, что называет вас. См. [политику конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
