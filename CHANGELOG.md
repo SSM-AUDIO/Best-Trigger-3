@@ -5,32 +5,32 @@
 ## English
 
 ### 0.3.19
-- **E-mail when you activate a key.** The licence window now has an e-mail field for the key, too. It is needed when we do not have an e-mail for your key yet (for example a key bought on plati.ru); it is saved with your key, and the **Lost your key?** page can give the key back with it. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep.
+- **E-mail with a key.** The licence window has an e-mail field for the key, too (needed for a key bought on plati.ru). The **Lost your key?** page finds the key by it.
 
 ### 0.3.18
-- **Messages from SSM-Audio.** From time to time the plugin shows a short message in a window (news, an important update). Each message is shown once. To ask for it, the plugin sends only the product, its version, the language of your system and whether you are in the trial or licensed; nothing that names you. See the [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
+- **Messages from SSM-Audio.** The plugin may show a short message in a window (news, an important update). Each message is shown once.
 
 ### 0.3.17
-- **The trial asks for your e-mail.** To start the 14-day trial, type your e-mail address in the licence window. We use it for the trial and to write to you about new versions and features. The [privacy policy](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) says what we keep and how to have it removed.
+- **The trial asks for your e-mail.** Type it in the licence window to start the 14-day trial.
 
 ### 0.3.16
-- **Match in the trial.** In the 14-day trial you can now search with Match and **listen** to the answers (the play triangle plays the answer itself; your mixer is not touched). Putting an answer into the mixer, its list of samples and their names are part of the full version and need a licence key.
-- **LUNA** (Universal Audio) is recognised as a DAW.
+- **Match in the trial:** you can search and listen to the answers; putting an answer into the mixer needs a licence key.
+- **LUNA** is recognised as a DAW.
 
 ### 0.3.15
-- **Lost your key?** The licence window has a link **Lost your key?**: on the page you enter the e-mail you gave when you paid and the key is shown (no e-mail is sent). On a computer where the key is already activated, the button **Show my key** shows it and copies it.
-- **More programs are recognised:** Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft and Renoise now work. If a program is still not recognised, the warning no longer disappears: it comes back every 40 seconds and the button in the corner of the window turns red.
-- **Plate names are kept** by presets, Undo and A/B (a renamed plate no longer goes back to the sample's name).
+- **Lost your key?** A link in the licence window; on an activated computer **Show my key** shows the key.
+- More programs are recognised: Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft, Renoise. A program that is still not recognised shows a warning that stays.
+- Renamed plates are kept by presets, Undo and A/B.
 
 ### 0.3.14
-- **Match is now part of the main window.** Click **Match** and the scope becomes a drop zone: drop one reference hit on it (an audio file, or a hit your DAW lets you drag out as a file) or click it to choose a file. While the search runs, the wave of the reference fills with colour, with the stage, the percentage and the time. The answers come as a list: each shows what it explains in all, in the body and in the top, and has buttons **Play**, **Apply**, **Top / Body** (the same samples with the levels fitted the other way, to compare in two clicks) and **i** (the samples with their levels). The **Phase** and **Spectrum** views of the scope show the answer you have put into the mixer against the reference. **Apply** brings the mixer back.
-- **Better and faster Match:** it finds the other layers and microphones of the same instrument (a layered snare, a close + room pair), it works with a **Top** option (the top of the sound counts more), it is 3-4 times faster, and a reference that begins with a pause is read correctly. New and changed files are added to the cache by themselves.
-- **Repair of sample paths:** when a project or a preset remembers a sample that was moved in your library or converted from a wav into a .bt3, the plugin finds it again (a setting, on by default).
+- **Match is part of the main window:** click **Match**, drop a reference hit on the scope, press **Start**. Each answer has **▶**, **Apply**, **Top / Body** and **i**; the **Phase** and **Spectrum** views show the answer you put into the mixer.
+- **Better and faster Match:** it finds other layers and microphones of the same instrument, has a new **Top** option and is 3–4 times faster.
+- **Repair of sample paths:** a project or preset finds a moved or converted sample again (a setting, on by default).
 
 ### 0.3.13
-- **Match to a reference (experimental):** pick one hit and the plug-in looks through your library for the samples whose sum sounds like it, and puts the answer into the mixer. Choose the drum (Kick / Snare / Tom), the range, the most samples, the time limit, and optionally **Tune**; a library **cache** makes the search start at once. The search goes on in the background even if you close the window; **Stop** keeps the answers found so far, and the window shows the time it took. It works with a **licence key**, not in the 14-day trial. Details in the manual.
-- **Mono per sample:** **Alt + click** (**Opt** on a Mac) on the **Pan** knob of a sample plays it as mono; the same click takes it back.
-- **Update notice:** the plug-in can tell you when this version is too old to work and where to download the new one. Nothing changes for a current version.
+- **Match to a reference (experimental):** pick one hit and the plugin finds samples in your library whose sum sounds like it. Works with a licence key. Details in the manual.
+- **Mono per sample:** **Alt + click** (**Opt** on a Mac) on the **Pan** knob.
+- **Update notice:** the plugin tells you when this version is too old to work and where to download the new one.
 
 ### 0.3.12
 - **Activation data:** when the plug-in runs in a program it does not recognise, it now reports the file name of that program (no folder, no user name) instead of just "Unknown". Nothing else changes.
@@ -62,36 +62,33 @@
 - **Copy** (A/B) no longer opens a menu: it copies the setting that is on onto the other one.
 
 ### 0.3.6
-- **EQ window: live spectrum.** Behind the curve you see the spectrum of the channel: the filled area is the sound after the EQ (so you see what your changes do), the thin line is the sound before it. The **Spectrum** button switches it off. It does not load the plugin's audio.
-- **EQ gain up to ±30 dB** for bells and shelves. The picture zooms out by itself (3, 6, 12, 30 dB) when you drag a dot towards its edge.
-- **Low Cut and High Cut slopes: 36 and 48 dB per octave** are added (6, 12, 18, 24, 36, 48). The mouse wheel over a cut dot changes its slope.
-- **Library browser:** the right-click menu of a sample or folder has **Show in Explorer** (Show in Finder on a Mac) at the bottom.
-- **Sensitivity** starts at 100 in a new plugin, so only the **Threshold** decides at first. Saved projects keep their value.
+- **EQ window:** live spectrum behind the curve (the **Spectrum** button switches it off); gain up to ±30 dB; Low Cut and High Cut slopes of 36 and 48 dB per octave.
+- **Library browser:** **Show in Explorer** (Show in Finder on a Mac) in the right-click menu.
+- **Sensitivity** starts at 100 in a new plugin.
 
 ### 0.3.5
 - The **Auto** button is now **Auto menu**. In it, the choice of what the phase is measured on (**Phase detection wide range / narrow range**) moved into the **Phase** section.
 - The menu item for starting playback automatically is removed.
 
 ### 0.3.4
-- **Velocity is read the way the well-known trigger reads it:** it is proportional to the peak of the hit, and a hit at the **Input** level (−6 dB by default) is velocity 127. The **Soft** control is gone. Quiet hits of the first layer start from silence and grow louder, as in the well-known trigger. Older projects may sound a little different: check **Input**.
-- **Sensitivity** is now a second threshold (the higher the number, the lower it is); the louder of the two thresholds decides. At 100 only the **Threshold** decides.
-- **Fast rolls and ghost notes:** a hit that follows another one closely and clearly rises above its tail is now played, so rolls and ghost notes are not skipped.
-- **Auto Threshold** and **Full Auto** set **Input** to −6 dB and put the Threshold closer to the soft hits.
-- Converted **.tci** instruments play at the volume written in the file. **Run the Migration again** to refresh instruments that were converted before.
+- **Velocity follows the peak of the hit:** a hit at the **Input** level (−6 dB by default) is velocity 127. The **Soft** control is gone. Older projects may sound a little different: check **Input**.
+- **Sensitivity** is a second threshold; the louder of the two decides.
+- **Fast rolls and ghost notes** are played.
+- **Auto Threshold** and **Full Auto** set **Input** to −6 dB.
+- Converted **.tci** instruments play at the volume written in the file: run the **Migration** again to refresh them.
 - The right panel has the buttons **Full Auto**, **Auto Threshold**, **Auto Phase** and **Auto** (a menu with the other tools).
-- The value boxes above the scope (Retrigger, Sensitivity, Smp Offset) are dragged **up and down**; the wheel changes them a little.
-- The plugin's latency is 39 ms. The update check no longer depends on the GitHub limit.
+- The value boxes above the scope are dragged **up and down**; the wheel changes them a little.
+- The plugin's latency is 39 ms.
 
 ### 0.3.3
-- **Velocity layers and volume now respond like in the well-known trigger.** A harder hit changes the velocity layer and, inside a layer, is a little louder. New plugins start with the scale set for this (**Soft** −19 dB, **Input** −6.9 dB); the Threshold is only where a hit is noticed. Projects saved earlier sound the same as before.
-- **Soft** line on the Timeline and **Input** up to +12 dB: set where the velocity scale begins and ends.
-- **Precise sample start** (settings menu, on for new plugins): the sample starts at the real beginning of the hit, whatever the Threshold.
-- Converted **.tci** instruments are played at the sample rate written in the file, as the well-known trigger plays them.
-- The samples sit 3 dB lower, as in the well-known trigger, and the original that passes through the plugin keeps its level: the plugin's output now equals the original track and the plugin's samples played side by side. The **Output** knob stays at 0 dB.
+- **Velocity layers and volume** respond like in the well-known trigger.
+- **Soft** line on the Timeline; **Input** up to +12 dB.
+- **Precise sample start** (settings menu).
+- Converted **.tci** instruments are played at the sample rate written in the file.
+- The samples sit 3 dB lower; the plugin's output equals the original track and the samples side by side.
 - The cross in the library search clears only the search.
-- The **Soft** line is pink (green is the Input line).
-- The **0 ms** mode is removed: the original is always delayed by the plugin latency (36 ms) so that samples can start before it.
-- **Buy** opens the payment page, the update notice opens the download page.
+- The **0 ms** mode is removed.
+- **Buy** opens the payment page.
 
 ### 0.3.2
 - **EQ:** Low Cut and High Cut get a **Slope** (6, 12, 18 or 24 dB per octave; 12 is the usual one, projects sound the same). The EQ curve no longer draws a line along the bottom edge.
@@ -199,32 +196,32 @@
 ## Русский
 
 ### 0.3.19
-- **E-mail при активации ключа.** В окне лицензии теперь есть поле e-mail и для ключа. Он нужен, если у нас ещё нет почты для вашего ключа (например, ключ куплен на plati.ru); он сохраняется вместе с ключом, и по нему страница **«Потерял ключ?»** сможет вернуть ключ. В [политике конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) написано, что мы храним.
+- **E-mail при вводе ключа.** В окне лицензии есть поле e-mail и для ключа (нужен для ключа, купленного на plati.ru). Страница **«Потерял ключ?»** находит ключ по нему.
 
 ### 0.3.18
-- **Сообщения от SSM-Audio.** Время от времени плагин показывает короткое сообщение в окне (новости, важное обновление). Каждое сообщение показывается один раз. Чтобы его запросить, плагин отправляет только продукт, версию, язык вашей системы и то, в триале вы или с ключом; ничего, что называет вас. См. [политику конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html).
+- **Сообщения от SSM-Audio.** Плагин может показать в окне короткое сообщение (новости, важное обновление). Каждое сообщение показывается один раз.
 
 ### 0.3.17
-- **Триал просит e-mail.** Чтобы начать 14-дневный триал, введите адрес электронной почты в окне лицензии. Мы используем его для триала и чтобы писать вам о новых версиях и возможностях. В [политике конфиденциальности](https://ssm-audio.github.io/Best-Trigger-3/privacy.html) написано, что мы храним и как это убрать.
+- **Триал просит e-mail.** Введите его в окне лицензии, чтобы начать 14-дневный триал.
 
 ### 0.3.16
-- **Подбор в триале.** В 14-дневном триале теперь можно искать подбором и **слушать** ответы (треугольник играет сам ответ, ваш микшер не трогается). Положить ответ в микшер, а также увидеть список его семплов и их названия можно только с лицензионным ключом.
-- **LUNA** (Universal Audio) распознаётся как DAW.
+- **Подбор в триале:** можно искать и слушать ответы; положить ответ в микшер можно только с лицензионным ключом.
+- **LUNA** распознаётся как DAW.
 
 ### 0.3.15
-- **Потеряли ключ?** В окне лицензии есть ссылка **Lost your key?**: на странице вводите e-mail, указанный при оплате, и ключ появляется на ней (письмо не отправляется). На компьютере, где ключ уже активирован, кнопка **Show my key** показывает его и копирует.
-- **Больше программ распознаётся:** теперь работает в Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft и Renoise. Если программа всё ещё не распознана, предупреждение больше не пропадает: оно возвращается каждые 40 секунд, а кнопка в углу окна становится красной.
-- **Имена плашек сохраняются** в пресетах, Undo и A/B (переименованная плашка больше не возвращается к имени семпла).
+- **Потеряли ключ?** Ссылка в окне лицензии; на компьютере, где ключ активирован, кнопка **Show my key** показывает ключ.
+- Больше программ распознаётся: Fender Studio Pro, MorningDAW, LMMS, Zrythm, Qtractor, Mixcraft, Renoise. Если программа всё ещё не распознана, предупреждение не пропадает.
+- Переименованные плашки сохраняются в пресетах, Undo и A/B.
 
 ### 0.3.14
-- **Match теперь часть основного окна.** Нажмите **Match**, и осциллограф превращается в зону для референса: бросьте на него один удар (аудиофайл или удар, который ваш DAW позволяет вытащить файлом) или щёлкните по нему и выберите файл. Пока идёт поиск, волна референса заполняется цветом, видны этап, проценты и время. Ответы приходят списком: у каждого показано, сколько он объясняет в целом, в теле и в верхе, и есть кнопки **Play**, **Apply**, **Top / Body** (те же семплы с уровнями, подогнанными по-другому, чтобы сравнить за два щелчка) и **i** (семплы с их уровнями). Виды **Phase** и **Spectrum** осциллографа показывают положенный в микшер ответ против референса. **Apply** возвращает микшер.
-- **Match стал точнее и быстрее:** находит другие слои и микрофоны того же инструмента (слоистый снейр, пара close + room), есть опция **Top** (верх звука учитывается сильнее), он быстрее в 3–4 раза, а референс, который начинается с паузы, читается правильно. Новые и изменённые файлы сами попадают в кэш.
-- **Починка путей к семплам:** если проект или пресет помнит семпл, который переместили в библиотеке или сконвертировали из wav в .bt3, плагин находит его снова (настройка, по умолчанию включена).
+- **Match стал частью основного окна:** нажмите **Match**, бросьте референс на осциллограф, нажмите **Start**. У каждого ответа есть **▶**, **Apply**, **Top / Body** и **i**; виды **Phase** и **Spectrum** показывают ответ, который вы положили в микшер.
+- **Match стал точнее и быстрее:** находит другие слои и микрофоны того же инструмента, есть новая опция **Top**, быстрее в 3–4 раза.
+- **Починка путей к семплам:** проект или пресет снова находит перемещённый или сконвертированный семпл (настройка, по умолчанию включена).
 
 ### 0.3.13
-- **Подбор по референсу (экспериментальная функция):** выберите один удар, и плагин переберёт вашу библиотеку в поисках семплов, чья сумма звучит как он, и положит ответ в микшер. Выбираются барабан (Kick / Snare / Tom), диапазон, наибольшее число семплов, лимит времени и при желании **Tune**; **кэш** библиотеки позволяет начинать поиск сразу. Поиск идёт в фоне, даже если закрыть окно; **Stop** оставляет найденное, а окно показывает, сколько времени заняла работа. Работает с **лицензионным ключом**, в 14-дневном триале недоступно. Подробности в руководстве.
-- **Моно для каждого семпла:** **Alt + щелчок** (**Opt** на Mac) по ручке **Pan** семпла включает моно; тот же щелчок возвращает как было.
-- **Уведомление об обновлении:** плагин может сообщить, что эта версия устарела и перестала работать, и где скачать новую. У актуальной версии ничего не меняется.
+- **Match, подбор по референсу (экспериментально):** выберите один удар, и плагин найдёт в вашей библиотеке семплы, чья сумма звучит как он. Работает с лицензионным ключом. Подробности в руководстве.
+- **Mono для семпла:** **Alt + щелчок** (**Opt** на Mac) по ручке **Pan**.
+- **Уведомление об обновлении:** плагин сообщает, когда эта версия слишком старая для работы и где скачать новую.
 
 ### 0.3.12
 - **Данные активации:** если плагин запущен в программе, которую он не узнаёт, он теперь сообщает имя файла этой программы (без папки и имени пользователя), а не просто «Unknown». Больше ничего не меняется.
@@ -256,36 +253,33 @@
 - **Copy** (A/B) больше не открывает меню: сразу копирует включённую настройку на другую.
 
 ### 0.3.6
-- **Окно EQ: живой спектр.** За кривой виден спектр канала: закрашенная область — звук после EQ (видно, что делают ваши изменения), тонкая линия — звук до него. Кнопка **Spectrum** выключает его. На звуковую часть плагина он не влияет.
-- **Усиление EQ до ±30 дБ** у колоколов и полок. Масштаб картинки сам увеличивается (3, 6, 12, 30 дБ), когда вы тянете точку к краю.
-- **Крутизна Low Cut и High Cut: добавлены 36 и 48 дБ на октаву** (6, 12, 18, 24, 36, 48). Колесо мыши над точкой среза меняет крутизну.
-- **Браузер библиотек:** в меню по правому клику на семпле или папке внизу есть **Show in Explorer** (на Mac — Show in Finder).
-- **Sensitivity** у нового плагина стоит на 100, поэтому сначала решает только **Threshold**. Сохранённые проекты сохраняют своё значение.
+- **Окно EQ:** живой спектр за кривой (кнопка **Spectrum** его выключает); усиление до ±30 дБ; крутизна Low Cut и High Cut 36 и 48 дБ на октаву.
+- **Браузер библиотеки:** **Show in Explorer** (Show in Finder на Mac) в меню правого щелчка.
+- **Sensitivity** в новом плагине начинается со 100.
 
 ### 0.3.5
 - Кнопка **Auto** теперь **Auto menu**. В ней выбор, по чему измеряется фаза (**Phase detection wide range / narrow range**), перенесён в раздел **Phase**.
 - Пункт меню автозапуска воспроизведения убран.
 
 ### 0.3.4
-- **Velocity считается так же, как в известном триггере:** она пропорциональна пику удара, а удар на уровне **Input** (по умолчанию −6 дБ) даёт velocity 127. Параметр **Soft** убран. Тихие удары первого слоя начинаются с тишины и становятся громче, как в известном триггере. Старые проекты могут звучать немного иначе: проверьте **Input**.
-- **Sensitivity** теперь второй порог (чем больше число, тем он ниже); решает более высокий из двух порогов. На 100 решает только **Threshold**.
-- **Быстрые роллы и призрачные ноты:** удар, который идёт сразу за предыдущим и заметно выше его хвоста, теперь играется, поэтому роллы и призрачные ноты не пропускаются.
-- **Auto Threshold** и **Full Auto** ставят **Input** −6 дБ и кладут Threshold ближе к тихим ударам.
-- Конвертированные инструменты **.tci** играют с громкостью, записанной в файле. **Повторите Migration**, чтобы обновить инструменты, сконвертированные раньше.
+- **Велосити следует за пиком удара:** удар на уровне **Input** (по умолчанию −6 дБ) — велосити 127. Регулятор **Soft** убран. Старые проекты могут звучать немного иначе: проверьте **Input**.
+- **Sensitivity** — второй порог; решает больший из двух.
+- **Быстрые роллы и призрачные ноты** играются.
+- **Auto Threshold** и **Full Auto** ставят **Input** на −6 дБ.
+- Конвертированные инструменты **.tci** играют с громкостью, записанной в файле: запустите **Migration** ещё раз, чтобы обновить их.
 - В правой панели кнопки **Full Auto**, **Auto Threshold**, **Auto Phase** и **Auto** (меню с остальными инструментами).
-- Окошки над осциллографом (Retrigger, Sensitivity, Smp Offset) тянутся **вверх и вниз**; колесо меняет значение понемногу.
-- Задержка плагина 39 мс. Проверка обновлений больше не зависит от лимита GitHub.
+- Плашки над осциллографом тянутся **вверх и вниз**; колесо меняет их понемногу.
+- Задержка плагина 39 мс.
 
 ### 0.3.3
-- **Слои по велосити и громкость теперь отзываются как в известном триггере.** Более сильный удар меняет слой и внутри слоя звучит немного громче. Новый плагин стартует со шкалой, настроенной для этого (**Soft** −19 дБ, **Input** −6,9 дБ); Threshold — только место, где удар замечается. Проекты, сохранённые раньше, звучат как прежде.
-- Линия **Soft** на Timeline и **Input** до +12 дБ: задают, где шкала велосити начинается и заканчивается.
-- **Precise sample start** (меню настроек, у нового плагина включено): сэмпл стартует с настоящего начала удара, при любом Threshold.
-- Конвертированные инструменты **.tci** играются с частотой дискретизации, записанной в файле, как их играет известный триггер.
-- Сэмплы звучат на 3 дБ тише, как в известном триггере, а оригинал, проходящий через плагин, сохраняет свой уровень: выход плагина теперь равен оригинальной дорожке и сэмплам плагина, пущенным рядом. Ручка **Output** остаётся на 0 дБ.
-- Крестик в поиске по библиотеке очищает только строку поиска.
-- Линия **Soft** розовая (зелёная — линия Input).
-- Режим **0 ms** убран: оригинал всегда задержан на задержку плагина (36 мс), чтобы сэмплы могли начинаться раньше него.
-- Кнопка **Buy** открывает страницу оплаты, уведомление об обновлении — страницу скачивания.
+- **Слои велосити и громкость** отзываются как у известного триггера.
+- Линия **Soft** на Timeline; **Input** до +12 дБ.
+- **Точный старт сэмпла** (меню настроек).
+- Конвертированные инструменты **.tci** играют с частотой дискретизации, записанной в файле.
+- Сэмплы на 3 дБ тише; выход плагина равен оригинальной дорожке и сэмплам рядом.
+- Крестик в поиске библиотеки очищает только поиск.
+- Режим **0 ms** убран.
+- **Buy** открывает страницу оплаты.
 
 ### 0.3.2
 - **EQ:** у Low Cut и High Cut появился **Slope** (6, 12, 18 или 24 дБ на октаву; 12 — обычный, проекты звучат так же). Кривая EQ больше не рисует линию вдоль нижнего края.
