@@ -4,6 +4,9 @@
 
 ## English
 
+### 0.3.20
+- **Shorter hints and messages** in the plugin.
+
 ### 0.3.19
 - **E-mail with a key.** The licence window has an e-mail field for the key, too (needed for a key bought on plati.ru). The **Lost your key?** page finds the key by it.
 
@@ -194,6 +197,9 @@
 - First release.
 
 ## Русский
+
+### 0.3.20
+- **Короче подсказки и сообщения** в плагине.
 
 ### 0.3.19
 - **E-mail при вводе ключа.** В окне лицензии есть поле e-mail и для ключа (нужен для ключа, купленного на plati.ru). Страница **«Потерял ключ?»** находит ключ по нему.
