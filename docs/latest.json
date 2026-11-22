@@ -1,5 +1,5 @@
 {
-  "version": "0.3.20",
+  "version": "0.3.21",
   "url": "https://ssm-audio.github.io/Best-Trigger-3/download.html",
-  "notes": "Shorter hints and messages in the plugin."
+  "notes": "Library scanning and Match Stop respond more reliably with large folders.\nDrag Pitch or Tune by semitones. Hold Alt/Option for smooth adjustment or Shift for fine smooth adjustment."
 }
