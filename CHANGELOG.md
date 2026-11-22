@@ -4,6 +4,10 @@
 
 ## English
 
+### 0.3.21
+- Library scanning and Match Stop respond more reliably with large folders.
+- Drag Pitch or Tune by semitones. Hold Alt/Option for smooth adjustment or Shift for fine smooth adjustment.
+
 ### 0.3.20
 - **Shorter hints and messages** in the plugin.
 
@@ -197,6 +201,10 @@
 - First release.
 
 ## Русский
+
+### 0.3.21
+- Сканирование библиотеки и остановка подбора надёжнее работают с большими папками.
+- Перетаскивание Pitch или Tune меняет высоту по полутонам. Alt/Option — плавно, Shift — плавно и точнее.
 
 ### 0.3.20
 - **Короче подсказки и сообщения** в плагине.
